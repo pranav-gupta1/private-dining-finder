@@ -17,7 +17,12 @@ export type EventStyle =
   | "meeting"
   | "buffet";
 
-export type TravelMode = "walking" | "driving" | "transit";
+/**
+ * Only door-to-door modes we can actually measure are offered. Transit would
+ * need a GTFS feed or a paid API per metro, and a wrong transit number is worse
+ * than no transit number, so it is deliberately absent.
+ */
+export type TravelMode = "walking" | "driving";
 
 export type SourceKind =
   | "venue_site"
@@ -39,7 +44,11 @@ export type DietaryOption =
   | "shellfish_allergy";
 
 export interface Evidence {
+  /** Dotted field path, e.g. "space.capacity", "venue.min_spend". */
   field: string;
+  /** Set when the evidence is about one specific space rather than the venue. */
+  spaceId: string | null;
+  menuId: string | null;
   sourceKind: SourceKind;
   sourceUrl: string | null;
   sourceTitle: string | null;
@@ -200,6 +209,12 @@ export interface RankedVenue {
   /** 0..100 */
   score: number;
   components: ScoreComponent[];
+  /**
+   * False for venues just outside the commute budget. They are returned rather
+   * than dropped so the UI can offer them as "stretch" options — a planner who
+   * gets zero results wants to know that two minutes of slack would fix it.
+   */
+  withinCommute: boolean;
   /** Short bullets explaining why this ranked where it did. */
   highlights: string[];
   warnings: string[];
