@@ -1,0 +1,1147 @@
+{
+  "market": "Manhattan, NY",
+  "methodology": "Collected from venue private-events pages first, then filled in from booking platforms (The Vendry, Tagvenue) and editorial round-ups where a venue publishes nothing itself. Capacities are recorded exactly as the source states them; anything we converted or estimated ourselves is marked as such and never presents as a published figure.",
+  "venues": [
+    {
+      "slug": "keens-steakhouse",
+      "name": "Keens Steakhouse",
+      "venueType": "restaurant",
+      "addressLine1": "72 West 36th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10018",
+      "neighborhood": "Garment District",
+      "lat": 40.750775,
+      "lon": -73.986,
+      "cuisines": ["Steakhouse", "American"],
+      "priceTier": 4,
+      "website": "https://www.keens.com/",
+      "eventsUrl": "https://www.keens.com/privateevents/",
+      "phone": "+1 212-947-3636",
+      "eventsEmail": "banquets@keens.com",
+      "summary": "1885 chophouse with four wood-panelled private rooms under a ceiling of clay pipes. The banquet team runs corporate dinners as a matter of routine and quotes a per-person rate up front.",
+      "eventStyles": ["seated_dinner", "meeting", "reception"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Lambs Room",
+          "kind": "private_room",
+          "seatedCapacity": 80,
+          "minGuests": 50,
+          "features": ["Fully private", "Historic memorabilia", "Dedicated service team"],
+          "notes": "The largest of the four rooms.",
+          "combinableWith": []
+        },
+        {
+          "name": "Lincoln Room",
+          "kind": "private_room",
+          "seatedCapacity": 45,
+          "minGuests": 40,
+          "features": ["Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Bullmoose Room",
+          "kind": "private_room",
+          "seatedCapacity": 35,
+          "minGuests": 30,
+          "features": ["Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Lillie Langtry Room",
+          "kind": "private_room",
+          "seatedCapacity": 25,
+          "minGuests": 20,
+          "features": ["Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Private dining lunch",
+          "format": "prix_fixe",
+          "pricePerPersonCents": 13000,
+          "courses": ["Appetiser", "Main", "Dessert"],
+          "url": "https://www.keens.com/privateevents/",
+          "notes": "Starting price quoted by the banquet office; excludes beverages, tax and service."
+        },
+        {
+          "name": "Private dining dinner",
+          "format": "prix_fixe",
+          "pricePerPersonCents": 20200,
+          "courses": ["Appetiser", "Main", "Dessert"],
+          "url": "https://www.keens.com/privateevents/",
+          "notes": "Starting price quoted by the banquet office; excludes beverages, tax and service."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Assumed from the menu format; confirm substitutions with the banquet office." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Assumed; confirm with the banquet office." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Lambs Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "Lambs Room: suited for parties of up to 80 guests, minimum of 50 guests.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Lincoln Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "Lincoln Room: up to 45 guests, minimum of 40 guests.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Bullmoose Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "Bullmoose Room: up to 35 guests, minimum of 30 guests.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Lillie Langtry Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "Lillie Langtry Room: up to 25 guests, minimum of 20 guests.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "menu.price",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "Lunch starting at $130 per person. Dinner starting at $202 per person.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.keens.com/privateevents/",
+          "sourceTitle": "Keens Steakhouse — Private Events",
+          "snippet": "72 West 36th Street, New York NY 10018. Banquets: banquets@keens.com, 212-268-5056.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "No dietary policy published. Vegetarian and gluten-free assumed to be workable at a venue of this type — treat as a question for the call, not a fact.",
+          "observedAt": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "slug": "carmines-times-square",
+      "name": "Carmine's Times Square",
+      "venueType": "restaurant",
+      "addressLine1": "200 West 44th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.757762,
+      "lon": -73.987079,
+      "cuisines": ["Italian", "Family style"],
+      "priceTier": 2,
+      "website": "https://carminesnyc.com/",
+      "eventsUrl": "https://carminesnyc.com/parties/times-square",
+      "phone": "+1 917-512-7128",
+      "eventsEmail": null,
+      "summary": "Family-style Italian built for volume. Two genuinely large private rooms with their own entrances and bars, plus a ladder of semi-private spaces for smaller groups.",
+      "eventStyles": ["seated_dinner", "reception", "buffet", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "The Sinatra Room",
+          "kind": "private_room",
+          "seatedCapacity": 230,
+          "standingCapacity": 275,
+          "squareFeet": 5000,
+          "features": ["Natural light", "Two full-service bars", "Private entrance"],
+          "combinableWith": []
+        },
+        {
+          "name": "The Jimmy Durante Room",
+          "kind": "private_room",
+          "seatedCapacity": 200,
+          "standingCapacity": 175,
+          "features": ["Private entrance", "Private bar", "Private restrooms", "Coat check"],
+          "notes": "Second floor.",
+          "combinableWith": []
+        },
+        {
+          "name": "Tetrazzini Space",
+          "kind": "semi_private",
+          "seatedCapacity": 58,
+          "standingCapacity": 50,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        },
+        {
+          "name": "The Mario Lanza Platform",
+          "kind": "semi_private",
+          "seatedCapacity": 46,
+          "standingCapacity": 40,
+          "features": ["Raised platform"],
+          "combinableWith": []
+        },
+        {
+          "name": "Tony Bennett",
+          "kind": "semi_private",
+          "seatedCapacity": 36,
+          "standingCapacity": 30,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        },
+        {
+          "name": "The La Guardia Corner",
+          "kind": "semi_private",
+          "seatedCapacity": 35,
+          "standingCapacity": 25,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        },
+        {
+          "name": "The Perry Como Space",
+          "kind": "semi_private",
+          "seatedCapacity": 28,
+          "standingCapacity": 20,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        },
+        {
+          "name": "The Lombardi Space",
+          "kind": "semi_private",
+          "seatedCapacity": 28,
+          "standingCapacity": 20,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Full restaurant buyout",
+          "kind": "full_buyout",
+          "seatedCapacity": 450,
+          "standingCapacity": 700,
+          "features": ["Whole venue"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Family-style party menu",
+          "format": "family_style",
+          "pricePerPersonCents": null,
+          "courses": ["Antipasti", "Salad", "Pasta", "Entrées", "Dessert"],
+          "url": "https://carminesnyc.com/parties/times-square",
+          "notes": "Platters are sized to share between three or four guests; per-person pricing is quoted per event."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Assumed from the pasta-heavy family-style format; confirm on the call." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Assumed; confirm on the call." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "The Sinatra Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "The Sinatra Room: seated 230, standing 275. 5,000 sq ft with natural light and two full-service bars.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Jimmy Durante Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "The Jimmy Durante Room: seated 200, standing 175. Second floor with its own private entrance, bar, restrooms and coat check.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Tetrazzini Space",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "Tetrazzini Space: seated 58, standing 50.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Mario Lanza Platform",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "The Mario Lanza Platform: seated 46, standing 40.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Full restaurant buyout",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "Full restaurant buyout: seated 450, standing 700.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://carminesnyc.com/parties/times-square",
+          "sourceTitle": "Carmine's Times Square — Private Dining",
+          "snippet": "200 West 44th Street, New York, NY 10036. 917.512.7128.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "No dietary policy published on the parties page. Treat as unconfirmed.",
+          "observedAt": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "slug": "virgils-real-barbecue",
+      "name": "Virgil's Real Barbecue",
+      "venueType": "restaurant",
+      "addressLine1": "152 West 44th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.757116,
+      "lon": -73.985322,
+      "cuisines": ["Barbecue", "American"],
+      "priceTier": 2,
+      "website": "https://virgilsbbq.com/",
+      "eventsUrl": "https://virgilsbbq.com/parties/times-square",
+      "phone": "+1 212-921-9494",
+      "eventsEmail": null,
+      "summary": "Two-floor barbecue hall a block off Times Square. The whole second level is a private room that can be split into smaller semi-private sections, which makes it unusually flexible for mixed-format evenings.",
+      "eventStyles": ["seated_dinner", "reception", "happy_hour", "buffet"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "The Rodeo Room",
+          "kind": "private_room",
+          "seatedCapacity": 220,
+          "standingCapacity": 225,
+          "minGuests": 15,
+          "features": ["Full second level", "Private bar"],
+          "combinableWith": ["The Smokey Pit"]
+        },
+        {
+          "name": "The Smokey Pit",
+          "kind": "semi_private",
+          "seatedCapacity": 70,
+          "standingCapacity": 75,
+          "minGuests": 15,
+          "features": ["Second level", "Semi-private"],
+          "combinableWith": ["The Rodeo Room"]
+        },
+        {
+          "name": "Full restaurant buyout",
+          "kind": "full_buyout",
+          "seatedCapacity": 300,
+          "standingCapacity": 350,
+          "features": ["Whole venue"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Group barbecue menu",
+          "format": "family_style",
+          "pricePerPersonCents": null,
+          "courses": ["Starters", "Barbecue platters", "Sides", "Dessert"],
+          "url": "https://virgilsbbq.com/parties/times-square",
+          "notes": "Food and beverage minimums apply; per-person pricing quoted per event."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Limited at a barbecue house — worth confirming numbers before committing." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "The Rodeo Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://virgilsbbq.com/parties/times-square",
+          "sourceTitle": "Virgil's Real Barbecue — Private Dining, Times Square",
+          "snippet": "The Rodeo Room: full second level. Seated 220, cocktail 225.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Smokey Pit",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://virgilsbbq.com/parties/times-square",
+          "sourceTitle": "Virgil's Real Barbecue — Private Dining, Times Square",
+          "snippet": "The Smokey Pit: second level semi-private area. Seated 70, cocktail 75.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Full restaurant buyout",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://virgilsbbq.com/parties/times-square",
+          "sourceTitle": "Virgil's Real Barbecue — Private Dining, Times Square",
+          "snippet": "Full restaurant: seated 300, cocktail 350. Minimum of 15+ guests required for private room reservations.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://virgilsbbq.com/parties/times-square",
+          "sourceTitle": "Virgil's Real Barbecue — Private Dining, Times Square",
+          "snippet": "152 West 44th Street, New York, NY 10036. 212.921.9494 x4.",
+          "observedAt": "2026-08-09"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Vegetarian coverage assumed to be thin at a barbecue restaurant. Not published; confirm.",
+          "observedAt": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "slug": "del-friscos-double-eagle-nyc",
+      "name": "Del Frisco's Double Eagle Steakhouse",
+      "venueType": "restaurant",
+      "addressLine1": "1221 Avenue of the Americas",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10020",
+      "neighborhood": "Rockefeller Center",
+      "lat": 40.759889,
+      "lon": -73.981699,
+      "cuisines": ["Steakhouse", "American"],
+      "priceTier": 4,
+      "website": "https://www.delfriscos.com/location/del-friscos-double-eagle-steakhouse-new-york-ny/",
+      "eventsUrl": "https://www.delfriscos.com/private-events-new-york-ny/",
+      "phone": "+1 212-575-5129",
+      "eventsEmail": null,
+      "summary": "Three floors overlooking Sixth Avenue with a ladder of private rooms from a boardroom twelve up to an eighty-seat dining room. AV capacity is published per room, which is rarer than it should be.",
+      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Large private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 80,
+          "standingCapacity": 100,
+          "features": ["A/V for 56", "Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Medium private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 40,
+          "standingCapacity": 45,
+          "features": ["A/V for 40", "Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Small private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 30,
+          "standingCapacity": 30,
+          "features": ["Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Boardroom",
+          "kind": "private_room",
+          "seatedCapacity": 18,
+          "standingCapacity": 25,
+          "features": ["A/V for 20", "Boardroom seating"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Custom private dining menu",
+          "format": "prix_fixe",
+          "pricePerPersonCents": null,
+          "courses": ["Starters", "Steak or seafood", "Sides", "Dessert"],
+          "url": "https://www.delfriscos.com/private-events-new-york-ny/",
+          "notes": "Menus are built per event with the private dining director; no published rate card."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Assumed; confirm with the private dining director." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Assumed; confirm with the private dining director." },
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Raw bar is central to the menu — flag allergies early." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Large private dining room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.delfriscos.com/private-events-new-york-ny/",
+          "sourceTitle": "Del Frisco's Double Eagle Steakhouse — Private Dining, New York",
+          "snippet": "80 seated / 100 cocktail, A/V capacity 56.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Medium private dining room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.delfriscos.com/private-events-new-york-ny/",
+          "sourceTitle": "Del Frisco's Double Eagle Steakhouse — Private Dining, New York",
+          "snippet": "40 seated / 45 cocktail, A/V capacity 40.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Small private dining room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.delfriscos.com/private-events-new-york-ny/",
+          "sourceTitle": "Del Frisco's Double Eagle Steakhouse — Private Dining, New York",
+          "snippet": "30 seated / 30 cocktail.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Boardroom",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.delfriscos.com/private-events-new-york-ny/",
+          "sourceTitle": "Del Frisco's Double Eagle Steakhouse — Private Dining, New York",
+          "snippet": "18 seated / 25 cocktail, A/V capacity 20.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published. Assumed workable at this price point; the shellfish note is a caution, not a claim.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "hunt-and-fish-club",
+      "name": "Hunt & Fish Club",
+      "venueType": "restaurant",
+      "addressLine1": "125 West 44th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.756731,
+      "lon": -73.983953,
+      "cuisines": ["Steakhouse", "American"],
+      "priceTier": 4,
+      "website": "https://www.hfcnyc.com/",
+      "eventsUrl": "https://www.hfcnyc.com/private-events",
+      "phone": "+1 212-575-4949",
+      "eventsEmail": null,
+      "summary": "Clubby Midtown steakhouse two minutes from Times Square with three named rooms and full A/V. Capacities come from its booking-platform listing rather than the restaurant's own page.",
+      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "The Blue Room",
+          "kind": "private_room",
+          "seatedCapacity": 70,
+          "standingCapacity": 100,
+          "features": ["Full A/V", "Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "The White Room",
+          "kind": "private_room",
+          "seatedCapacity": null,
+          "standingCapacity": 250,
+          "features": ["Reception format"],
+          "notes": "Listed for receptions only; no seated figure published.",
+          "combinableWith": []
+        },
+        {
+          "name": "The Green Room",
+          "kind": "private_room",
+          "seatedCapacity": 30,
+          "features": ["Intimate", "Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "The Blue Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/20838/hunt-fish-club-new-york-ny/space/1416",
+          "sourceTitle": "The Blue Room at Hunt & Fish Club — The Vendry",
+          "snippet": "The Blue Room accommodates up to 100 guests: 70 seated, 100 standing, with full A/V capabilities.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The White Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/20838/hunt-fish-club-new-york-ny",
+          "sourceTitle": "Hunt & Fish Club — The Vendry",
+          "snippet": "The White Room accommodates up to 250 for a full-scale reception.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Green Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/20838/hunt-fish-club-new-york-ny",
+          "sourceTitle": "Hunt & Fish Club — The Vendry",
+          "snippet": "The Green Room accommodates up to 30 guests for a private, intimate dining experience.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "sushi-lab-times-square",
+      "name": "Sushi Lab",
+      "venueType": "restaurant",
+      "addressLine1": "132 West 47th Street",
+      "addressLine2": "Rooftop, Sanctuary Hotel",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.759194,
+      "lon": -73.983741,
+      "cuisines": ["Japanese", "Sushi"],
+      "priceTier": 4,
+      "website": "https://www.sushilabny.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+      "phone": "+1 212-234-7003",
+      "eventsEmail": null,
+      "summary": "Retractable-roof sushi bar above the Sanctuary Hotel. Takes the whole space as one buyout rather than offering separate rooms, and publishes a hard minimum spend — useful for a planner who needs a number before a call.",
+      "eventStyles": ["seated_dinner", "reception", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Entire rooftop",
+          "kind": "rooftop",
+          "seatedCapacity": 40,
+          "minSpendCents": 1000000,
+          "features": ["Retractable roof", "Skyline views", "Full buyout only"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Sushi-led menu — flag allergies early." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Entire rooftop",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "Sushi Lab, Entire Space: 40 seated, $10,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Entire rooftop",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "$10,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "havana-central-times-square",
+      "name": "Havana Central Times Square",
+      "venueType": "restaurant",
+      "addressLine1": "151 West 46th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.758678,
+      "lon": -73.985447,
+      "cuisines": ["Cuban", "Latin American"],
+      "priceTier": 2,
+      "website": "https://havanacentral.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+      "phone": "+1 212-398-7440",
+      "eventsEmail": null,
+      "summary": "Large Cuban restaurant and bar with a glass-walled private room and a published minimum that sits well below the Midtown average.",
+      "eventStyles": ["seated_dinner", "happy_hour", "reception"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Glass Room",
+          "kind": "private_room",
+          "seatedCapacity": 22,
+          "minSpendCents": 120000,
+          "features": ["Glass walls", "Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Glass Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "Havana Central, Glass Room: 22 seated, $1,200 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Glass Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "$1,200 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "russian-samovar",
+      "name": "Russian Samovar",
+      "venueType": "restaurant",
+      "addressLine1": "256 West 52nd Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10019",
+      "neighborhood": "Theater District",
+      "lat": 40.763399,
+      "lon": -73.984549,
+      "cuisines": ["Russian", "Eastern European"],
+      "priceTier": 3,
+      "website": "https://russiansamovar.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+      "phone": "+1 212-757-0168",
+      "eventsEmail": null,
+      "summary": "Long-running Theater District institution with a first-floor private room and a per-person events rate that includes the infused vodkas it is known for.",
+      "eventStyles": ["seated_dinner", "reception"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Private Room",
+          "kind": "private_room",
+          "seatedCapacity": 36,
+          "perPersonCents": 15000,
+          "features": ["Fully private", "Live piano"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Private Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "Russian Samovar, Private Room: 36 seated, $150 per person per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.per_person",
+          "space": "Private Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "$150 per person per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "trattoria-dellarte",
+      "name": "Trattoria Dell'Arte",
+      "venueType": "restaurant",
+      "addressLine1": "900 Seventh Avenue",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10019",
+      "neighborhood": "Midtown West",
+      "lat": 40.764947,
+      "lon": -73.980974,
+      "cuisines": ["Italian"],
+      "priceTier": 3,
+      "website": "https://www.trattoriadellarte.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+      "phone": "+1 212-245-9800",
+      "eventsEmail": null,
+      "summary": "Across from Carnegie Hall, best known for its antipasto bar. The Wine Room is small — this is a shortlist entry for a leadership dinner rather than a whole-team event.",
+      "eventStyles": ["seated_dinner", "meeting"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Wine Room",
+          "kind": "private_room",
+          "seatedCapacity": 16,
+          "minSpendCents": 150000,
+          "features": ["Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; the antipasto bar suggests good coverage. Confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Wine Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+          "sourceTitle": "Private Dining Rooms in Midtown Manhattan — Tagvenue",
+          "snippet": "Trattoria Dell'Arte, Wine Room: 16 seated, $1,500 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Wine Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+          "sourceTitle": "Private Dining Rooms in Midtown Manhattan — Tagvenue",
+          "snippet": "$1,500 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "kashkaval-garden",
+      "name": "Kashkaval Garden",
+      "venueType": "restaurant",
+      "addressLine1": "852 Ninth Avenue",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10019",
+      "neighborhood": "Hell's Kitchen",
+      "lat": 40.765264,
+      "lon": -73.987267,
+      "cuisines": ["Mediterranean", "Tapas"],
+      "priceTier": 2,
+      "website": "https://kashkavalgarden.com/",
+      "eventsUrl": null,
+      "phone": "+1 212-245-1758",
+      "eventsEmail": null,
+      "summary": "Mediterranean small plates in Hell's Kitchen with a heated back garden room. Capacity comes from an editorial guide rather than the restaurant, which publishes nothing about private events.",
+      "eventStyles": ["seated_dinner", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "The Garden Room",
+          "kind": "private_room",
+          "seatedCapacity": 45,
+          "features": ["Enclosed garden", "Heated"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Mezze-led menu; not formally published." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "The Garden Room",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/new-york/guides/where-to-have-a-private-dinner-in-nyc-right-now",
+          "sourceTitle": "The Best Private Dining Rooms In NYC — The Infatuation",
+          "snippet": "Kashkaval Garden, Hell's Kitchen: The Garden Room seats 45; full restaurant buyout available.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "fifty-three-w53",
+      "name": "53",
+      "venueType": "restaurant",
+      "addressLine1": "53 West 53rd Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10019",
+      "neighborhood": "Midtown",
+      "lat": 40.761601,
+      "lon": -73.978283,
+      "cuisines": ["Contemporary American"],
+      "priceTier": 4,
+      "website": "https://www.53restaurant.com/",
+      "eventsUrl": null,
+      "phone": null,
+      "eventsEmail": null,
+      "summary": "Fine-dining room in the tower beside MoMA. One small private room, no published contact for events — a call-first candidate.",
+      "eventStyles": ["seated_dinner"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 22,
+          "features": ["Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Private dining room",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/new-york/guides/where-to-have-a-private-dinner-in-nyc-right-now",
+          "sourceTitle": "The Best Private Dining Rooms In NYC — The Infatuation",
+          "snippet": "53, Midtown, 53 W 53rd St: private dining room holds 22 guests.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "empire-steak-house-west",
+      "name": "Empire Steak House",
+      "venueType": "restaurant",
+      "addressLine1": "237 West 54th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10019",
+      "neighborhood": "Midtown West",
+      "lat": 40.764686,
+      "lon": -73.983136,
+      "cuisines": ["Steakhouse"],
+      "priceTier": 4,
+      "website": "https://empiresteakhouseny.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+      "phone": "+1 212-582-6900",
+      "eventsEmail": null,
+      "summary": "Family-run steakhouse north of Times Square. The VIP room takes fifty seated and a hundred and fifty standing, and the venue quotes a flat per-person rate for events.",
+      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "VIP Room",
+          "kind": "private_room",
+          "seatedCapacity": 50,
+          "standingCapacity": 150,
+          "perPersonCents": 11200,
+          "features": ["Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Full buyout",
+          "kind": "full_buyout",
+          "seatedCapacity": 120,
+          "perPersonCents": 11200,
+          "features": ["Whole venue"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "VIP Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+          "sourceTitle": "Private Dining Rooms in Midtown Manhattan — Tagvenue",
+          "snippet": "Empire Steak House West, VIP Room Private Room One: 50 seated, 150 standing, $112 per person per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.per_person",
+          "space": "VIP Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/midtown-manhattan",
+          "sourceTitle": "Private Dining Rooms in Midtown Manhattan — Tagvenue",
+          "snippet": "$112 per person per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Full buyout",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "Empire Steak House, Full Buyout: 120 seated, $112 per person per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "the-alderman-times-square",
+      "name": "The Alderman",
+      "venueType": "bar",
+      "addressLine1": "145 West 47th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10036",
+      "neighborhood": "Theater District",
+      "lat": 40.758906,
+      "lon": -73.983578,
+      "cuisines": ["American", "Gastropub"],
+      "priceTier": 2,
+      "website": null,
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+      "phone": null,
+      "eventsEmail": null,
+      "summary": "Bar-led Theater District space that only takes full buyouts. Capacity and minimum come from a booking platform; the venue publishes no contact details of its own, so this is a needs-a-call entry.",
+      "eventStyles": ["happy_hour", "reception"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Entire venue",
+          "kind": "full_buyout",
+          "seatedCapacity": 75,
+          "minSpendCents": 800000,
+          "features": ["Bar-led", "Full buyout only"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Entire venue",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "The Alderman, Entire Venue: 75 seated, $8,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Entire venue",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "$8,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "haswell-greens-midtown",
+      "name": "Haswell Green's",
+      "venueType": "event_space",
+      "addressLine1": "240 East 75th Street",
+      "city": "New York",
+      "region": "NY",
+      "postalCode": "10021",
+      "neighborhood": "Upper East Side",
+      "lat": 40.771267,
+      "lon": -73.957054,
+      "cuisines": ["American"],
+      "priceTier": 3,
+      "website": "https://haswellgreens.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+      "phone": "+1 212-988-1100",
+      "eventsEmail": null,
+      "summary": "Multi-floor party venue with a 320-capacity ground floor. Well outside a Times Square walking radius — included so the commute filter has something real to exclude.",
+      "eventStyles": ["reception", "happy_hour", "buffet"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "First Floor",
+          "kind": "private_room",
+          "seatedCapacity": 100,
+          "standingCapacity": 320,
+          "minSpendCents": 3000000,
+          "features": ["Private bar", "DJ booth"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "First Floor",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "Haswell Green's, First Floor: 100 seated, 320 standing, $30,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "First Floor",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/new-york-city/times-square",
+          "sourceTitle": "Private Dining Rooms in Times Square — Tagvenue",
+          "snippet": "$30,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    }
+  ]
+}
