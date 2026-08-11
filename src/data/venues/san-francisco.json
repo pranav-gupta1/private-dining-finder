@@ -1,0 +1,1117 @@
+{
+  "market": "San Francisco, CA",
+  "methodology": "Centred on the Transbay / Rincon Hill corridor around Salesforce Tower. Two venues that appear prominently in San Francisco private-dining guides — Town Hall and Roy's — were found and then deliberately excluded because both have closed; stale directory listings for closed restaurants are the most common failure mode in this data.",
+  "venues": [
+    {
+      "slug": "prospect-sf",
+      "name": "Prospect",
+      "venueType": "restaurant",
+      "addressLine1": "300 Spear Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "neighborhood": "Rincon Hill",
+      "lat": 37.789471,
+      "lon": -122.390694,
+      "cuisines": ["New American", "Californian"],
+      "priceTier": 4,
+      "website": "https://www.prospectsf.com/",
+      "eventsUrl": "https://www.prospectsf.com/private-events/",
+      "phone": "+1 415-247-7770",
+      "eventsEmail": "events@prospectsf.com",
+      "summary": "From the Boulevard team, five minutes' walk from Salesforce Tower. The Candace Room has its own reception area and full bar, which is the difference between a dinner and a dinner people arrive at properly.",
+      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "The Candace Room",
+          "kind": "private_room",
+          "seatedCapacity": 50,
+          "standingCapacity": 65,
+          "features": ["Floor-to-ceiling windows", "Pre-dinner reception area", "Full bar"],
+          "combinableWith": ["Semi-private space"]
+        },
+        {
+          "name": "Semi-private space",
+          "kind": "semi_private",
+          "seatedCapacity": 30,
+          "standingCapacity": 40,
+          "features": ["Reclaimed wood", "Loft-like"],
+          "combinableWith": ["The Candace Room"]
+        },
+        {
+          "name": "Full restaurant buyout",
+          "kind": "full_buyout",
+          "seatedCapacity": 150,
+          "standingCapacity": 200,
+          "features": ["Whole venue"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Private event menu",
+          "format": "prix_fixe",
+          "pricePerPersonCents": null,
+          "courses": ["First", "Main", "Dessert"],
+          "url": "https://www.prospectsf.com/private-events/",
+          "notes": "Built per event; no published rate card."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm with the events team." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm with the events team." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "The Candace Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.prospectsf.com/private-events/",
+          "sourceTitle": "Prospect — Private Events",
+          "snippet": "The Candace Room: 50 seated, 65 standing. Floor-to-ceiling windows with cityscape views and a pre-dinner reception area with full bar.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Semi-private space",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.prospectsf.com/private-events-venue/semi-private-space/",
+          "sourceTitle": "Prospect — Semi-Private Space",
+          "snippet": "Semi-private space: 30 seated, 40 standing.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Full restaurant buyout",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.prospectsf.com/private-events/",
+          "sourceTitle": "Prospect — Private Events",
+          "snippet": "Prospect is available for buyout events of up to 150 guests seated and up to 200 for receptions.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.prospectsf.com/private-events/",
+          "sourceTitle": "Prospect — Private Events",
+          "snippet": "300 Spear St, San Francisco, CA 94105. 415.247.7770. events@prospectsf.com.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published on the events page.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "wayfare-tavern",
+      "name": "Wayfare Tavern",
+      "venueType": "restaurant",
+      "addressLine1": "201 Pine Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94104",
+      "neighborhood": "Financial District",
+      "lat": 37.791543,
+      "lon": -122.401163,
+      "cuisines": ["American", "Californian"],
+      "priceTier": 4,
+      "website": "https://www.wayfaretavern.com/",
+      "eventsUrl": "https://www.wayfaretavern.com/private-events",
+      "phone": "+1 415-772-9060",
+      "eventsEmail": "contact@wayfaretavern.com",
+      "summary": "Tyler Florence's Financial District tavern, spread over three floors. Five bookable spaces, including two fully private rooms that each take fifty seated.",
+      "eventStyles": ["seated_dinner", "reception", "happy_hour", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Barbary Room",
+          "kind": "private_room",
+          "seatedCapacity": 50,
+          "standingCapacity": 65,
+          "features": ["Fully private"],
+          "notes": "Positioned by the venue for corporate dinners.",
+          "combinableWith": []
+        },
+        {
+          "name": "Juniper Dining Room",
+          "kind": "private_room",
+          "seatedCapacity": 50,
+          "standingCapacity": 65,
+          "features": ["Fully private"],
+          "combinableWith": []
+        },
+        {
+          "name": "Sequoia Lounge",
+          "kind": "semi_private",
+          "seatedCapacity": 18,
+          "standingCapacity": 65,
+          "features": ["Large bar", "Reception friendly"],
+          "combinableWith": []
+        },
+        {
+          "name": "Cellar Dining Room",
+          "kind": "semi_private",
+          "seatedCapacity": 18,
+          "features": ["Wine cellar setting"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Barbary Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.wayfaretavern.com/private-events",
+          "sourceTitle": "Wayfare Tavern — Private Dining",
+          "snippet": "Barbary Room — seated 50, standing 65. A fully private space, ideal for corporate dinners and social events.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Juniper Dining Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.wayfaretavern.com/private-events",
+          "sourceTitle": "Wayfare Tavern — Private Dining",
+          "snippet": "Juniper Dining Room — seated 50, standing 65. A fully private space.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Sequoia Lounge",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.wayfaretavern.com/private-events",
+          "sourceTitle": "Wayfare Tavern — Private Dining",
+          "snippet": "Sequoia Lounge — seated 18, standing 65. A semi-private space with a large bar, perfect for receptions.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Cellar Dining Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.wayfaretavern.com/private-events",
+          "sourceTitle": "Wayfare Tavern — Private Dining",
+          "snippet": "Cellar Dining Room — seated 18.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.wayfaretavern.com/private-events",
+          "sourceTitle": "Wayfare Tavern — Private Dining",
+          "snippet": "201 Pine Street, San Francisco, CA 94104. +1 (415) 772-9060. contact@wayfaretavern.com.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "boulevard-sf",
+      "name": "Boulevard",
+      "venueType": "restaurant",
+      "addressLine1": "1 Mission Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "neighborhood": "Embarcadero",
+      "lat": 37.791345,
+      "lon": -122.390698,
+      "cuisines": ["New American", "Californian"],
+      "priceTier": 4,
+      "website": "https://www.boulevardrestaurant.com/",
+      "eventsUrl": "https://www.boulevardrestaurant.com/private-events1/",
+      "phone": "+1 415-543-6084",
+      "eventsEmail": null,
+      "summary": "Nancy Oakes' belle-époque room under the Bay Bridge approach. L'Avenue divides into three fourteen-seat salons, which is genuinely useful for a breakout-then-dinner agenda.",
+      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "L'Avenue Private Dining Room",
+          "kind": "private_room",
+          "seatedCapacity": 52,
+          "standingCapacity": 70,
+          "features": ["Divides into three salons", "Fully private"],
+          "notes": "Each of the three sub-rooms takes up to 14 seated.",
+          "combinableWith": []
+        },
+        {
+          "name": "The Wine Vault",
+          "kind": "semi_private",
+          "seatedCapacity": 12,
+          "features": ["Single long table", "Semi-private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "L'Avenue Private Dining Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/24906/boulevard-san-francisco-ca/space/2405",
+          "sourceTitle": "L'Avenue at Boulevard — The Vendry",
+          "snippet": "The fully combined space allows 52 seated guests for dinner or up to 70 guests for a standing reception, and can be divided into three semi-private spaces each accommodating up to 14 seated guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Wine Vault",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/24906/boulevard-san-francisco-ca",
+          "sourceTitle": "Boulevard — The Vendry",
+          "snippet": "The Wine Vault: one long table provides seating for up to 12 guests in a semi-private setting.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "epic-steak-sf",
+      "name": "EPIC Steak",
+      "venueType": "restaurant",
+      "addressLine1": "369 The Embarcadero",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "neighborhood": "Embarcadero",
+      "lat": 37.790626,
+      "lon": -122.388558,
+      "cuisines": ["Steakhouse", "Californian"],
+      "priceTier": 4,
+      "website": "https://www.epicsteak.com/",
+      "eventsUrl": "https://doc.epicsteak.com/pdf/EpicRoasthouse_PrivateDining.pdf",
+      "phone": "+1 415-369-9955",
+      "eventsEmail": null,
+      "summary": "Waterfront steakhouse under the Bay Bridge, next door to Waterbar and available as a combined buyout with it. The Piazza has retractable walls, so it scales from fifty seated to a hundred and seventy-five.",
+      "eventStyles": ["seated_dinner", "reception", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Upstairs Dining Room",
+          "kind": "private_room",
+          "seatedCapacity": 60,
+          "features": ["Bay views", "Fully private"],
+          "combinableWith": ["The Enclosed Bayside Piazza"]
+        },
+        {
+          "name": "The Enclosed Bayside Piazza",
+          "kind": "semi_private",
+          "seatedCapacity": 50,
+          "standingCapacity": 85,
+          "squareFeet": 1000,
+          "features": ["Fireplace", "Retractable walls"],
+          "notes": "Can be privatised for larger events of up to 175 guests.",
+          "combinableWith": ["Upstairs Dining Room"]
+        },
+        {
+          "name": "The Quiver Lounge",
+          "kind": "semi_private",
+          "standingCapacity": 60,
+          "squareFeet": 600,
+          "features": ["Event bar", "Wrap-around cocktail balcony"],
+          "notes": "Capacity is our estimate, not a published figure — see the trust note.",
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Seafood-heavy menu — flag early." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Upstairs Dining Room",
+          "sourceKind": "venue_document",
+          "sourceUrl": "https://doc.epicsteak.com/pdf/EpicRoasthouse_PrivateDining.pdf",
+          "sourceTitle": "EPIC Steak — Private Dining Guide (PDF)",
+          "snippet": "A private upstairs dining room with stunning bay views that accommodates groups of up to 60.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Enclosed Bayside Piazza",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/rooms/san-francisco/87130/epic-steak/the-enclosed-piazza",
+          "sourceTitle": "The Enclosed Piazza at Epic Steak — Tagvenue",
+          "snippet": "1,000 square feet semi-private space with a cozy fireplace and retractable walls that accommodates up to 50 seated guests or 85 for standing receptions, with the option to privatize for larger events of up to 175 guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Quiver Lounge",
+          "sourceKind": "inferred",
+          "sourceUrl": "https://doc.epicsteak.com/pdf/EpicRoasthouse_PrivateDining.pdf",
+          "sourceTitle": "EPIC Steak — Private Dining Guide (PDF)",
+          "snippet": "The venue publishes 600 sq ft and describes an event bar and wrap-around balcony but gives no headcount. Estimated at 60 standing using the 10 sq ft per person planning figure for a reception with a bar. Confirm before use.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "waterbar-sf",
+      "name": "Waterbar",
+      "venueType": "restaurant",
+      "addressLine1": "399 The Embarcadero",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "neighborhood": "Embarcadero",
+      "lat": 37.790152,
+      "lon": -122.388014,
+      "cuisines": ["Seafood", "Californian"],
+      "priceTier": 4,
+      "website": "https://www.waterbarsf.com/",
+      "eventsUrl": "https://media-cdn.getbento.com/accounts/57c286fa6cfbd8712bc882c30a596d49/media/kZJ7Pu0SQtCaX44Wvgab_Waterbar_PDG_081524-merged.pdf",
+      "phone": "+1 415-284-9922",
+      "eventsEmail": null,
+      "summary": "Seafood room on the water with two aquarium columns in the middle of it. Indoor and outdoor spaces together take receptions of up to four hundred, and it can be bought out jointly with EPIC Steak next door.",
+      "eventStyles": ["reception", "seated_dinner", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Combined indoor and outdoor spaces",
+          "kind": "full_buyout",
+          "standingCapacity": 400,
+          "features": ["Waterfront terrace", "Bay Bridge views"],
+          "notes": "Joint buyout with EPIC Steak next door is also available.",
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Shellfish-led menu — flag early." },
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Combined indoor and outdoor spaces",
+          "sourceKind": "venue_document",
+          "sourceUrl": "https://media-cdn.getbento.com/accounts/57c286fa6cfbd8712bc882c30a596d49/media/kZJ7Pu0SQtCaX44Wvgab_Waterbar_PDG_081524-merged.pdf",
+          "sourceTitle": "Waterbar — Private Dining Guide (PDF)",
+          "snippet": "A variety of indoor and outdoor spaces that can accommodate receptions for up to 400 guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "yank-sing-rincon-center",
+      "name": "Yank Sing — Rincon Center",
+      "venueType": "restaurant",
+      "addressLine1": "101 Spear Street",
+      "addressLine2": "Rincon Center",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94105",
+      "neighborhood": "Rincon Hill",
+      "lat": 37.792448,
+      "lon": -122.392468,
+      "cuisines": ["Chinese", "Dim sum"],
+      "priceTier": 3,
+      "website": "https://yanksing.com/",
+      "eventsUrl": "https://yanksing.com/locations/",
+      "phone": "+1 415-957-9300",
+      "eventsEmail": "events@yanksing.com",
+      "summary": "Cart-service dim sum three minutes from Salesforce Tower, with a banquet operation that can spill into the Rincon Center atrium. The format handles mixed dietary requirements better than most.",
+      "eventStyles": ["seated_dinner", "buffet", "reception", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Restaurant reception",
+          "kind": "full_buyout",
+          "standingCapacity": 200,
+          "seatedCapacity": 150,
+          "features": ["Cart service", "Private banquet menus"],
+          "combinableWith": ["Rincon Center atrium"]
+        },
+        {
+          "name": "Rincon Center atrium",
+          "kind": "outdoor",
+          "standingCapacity": 800,
+          "features": ["Atrium", "Rain column"],
+          "notes": "Used together with the restaurant for events above 200.",
+          "combinableWith": ["Restaurant reception"]
+        }
+      ],
+      "menus": [
+        {
+          "name": "Banquet menu",
+          "format": "family_style",
+          "pricePerPersonCents": null,
+          "courses": ["Dim sum", "Mains", "Noodles", "Dessert"],
+          "url": "https://yanksing.com/",
+          "notes": "Quoted per event by the banquet team."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Vegetarian dim sum is a standing part of the menu." },
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Shellfish is used widely — flag early." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Restaurant reception",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.cvent.com/venues/san-francisco/restaurant/yank-sing-rincon-center/venue-15b640a1-8600-45c5-a571-38bb743c0acb",
+          "sourceTitle": "Yank Sing — Rincon Center — Cvent",
+          "snippet": "If you have fewer than 200 people, the reception can be held in the restaurant.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Rincon Center atrium",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.cvent.com/venues/san-francisco/restaurant/yank-sing-rincon-center/venue-15b640a1-8600-45c5-a571-38bb743c0acb",
+          "sourceTitle": "Yank Sing — Rincon Center — Cvent",
+          "snippet": "The space has the capacity for 1,000 people, including the restaurant's dining room plus the Rincon Center atrium when used together.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://yanksing.com/",
+          "sourceTitle": "Yank Sing",
+          "snippet": "Yank Sing offers private dining for groups of all sizes and is available to cater your event. events@yanksing.com.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "directory",
+          "sourceUrl": "https://yanksing.com/",
+          "sourceTitle": "Yank Sing",
+          "snippet": "Vegetarian dim sum appears throughout the standing menu.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "fogo-de-chao-sf",
+      "name": "Fogo de Chão",
+      "venueType": "restaurant",
+      "addressLine1": "201 South 3rd Street",
+      "addressLine2": "Suite 100",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94103",
+      "neighborhood": "South Beach",
+      "lat": 37.785251,
+      "lon": -122.399364,
+      "cuisines": ["Brazilian", "Steakhouse"],
+      "priceTier": 3,
+      "website": "https://fogodechao.com/location/san-francisco/",
+      "eventsUrl": "https://thevendry.com/venue/117705/fogo-de-chao-brazilian-steakhouse-san-francisco-san-francisco-ca",
+      "phone": "+1 415-834-3900",
+      "eventsEmail": null,
+      "summary": "Churrascaria near Yerba Buena with two private rooms that combine. The all-you-can-eat format removes menu negotiation entirely, which is worth something when the brief is thirty people next Thursday.",
+      "eventStyles": ["seated_dinner", "buffet", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Private Room Combination",
+          "kind": "private_room",
+          "seatedCapacity": 60,
+          "features": ["Fully private", "Divisible"],
+          "combinableWith": []
+        },
+        {
+          "name": "Semi-Private Room",
+          "kind": "semi_private",
+          "seatedCapacity": 30,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Full churrasco experience",
+          "format": "buffet",
+          "pricePerPersonCents": null,
+          "courses": ["Market table", "Fire-roasted meats", "Sides", "Dessert"],
+          "url": "https://fogodechao.com/location/san-francisco/",
+          "notes": "Fixed-format service; group pricing quoted per event."
+        }
+      ],
+      "dietary": [
+        { "option": "gluten_free", "dedicated": false, "notes": "Meat-and-market-table format is broadly gluten-free; confirm sides." },
+        { "option": "vegetarian", "dedicated": true, "notes": "Market table is a substantial vegetarian option in its own right." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Private Room Combination",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/117705/fogo-de-chao-brazilian-steakhouse-san-francisco-san-francisco-ca/space/16822",
+          "sourceTitle": "Private Room Combination at Fogo de Chão San Francisco — The Vendry",
+          "snippet": "Private room combination with capacity for 60 guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Semi-Private Room",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/117705/fogo-de-chao-brazilian-steakhouse-san-francisco-san-francisco-ca/space/16826",
+          "sourceTitle": "Semi-Private Room at Fogo de Chão San Francisco — The Vendry",
+          "snippet": "Semi-private room with capacity for 30 guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Derived from the published service format rather than a stated dietary policy.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "la-mar-sf",
+      "name": "La Mar Cebichería Peruana",
+      "venueType": "restaurant",
+      "addressLine1": "Pier 1½, The Embarcadero",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94111",
+      "neighborhood": "Embarcadero",
+      "lat": 37.795934,
+      "lon": -122.393641,
+      "cuisines": ["Peruvian", "Seafood"],
+      "priceTier": 3,
+      "website": "https://lamarsf.com/",
+      "eventsUrl": null,
+      "phone": "+1 415-397-8880",
+      "eventsEmail": null,
+      "summary": "Pier-side Peruvian with a waterfront patio that takes a hundred seated. The range of bookable spaces runs from a twelve-top to a five-hundred-person buyout.",
+      "eventStyles": ["reception", "seated_dinner", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Waterfront patio",
+          "kind": "outdoor",
+          "seatedCapacity": 100,
+          "standingCapacity": 150,
+          "features": ["Bay views", "Outdoor"],
+          "combinableWith": ["Lobby Bar"]
+        },
+        {
+          "name": "Lobby Bar",
+          "kind": "semi_private",
+          "standingCapacity": 30,
+          "features": ["Pisco bar"],
+          "notes": "Listed for cocktail hours of 20 to 30.",
+          "combinableWith": ["Waterfront patio"]
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Cebiche-led menu — flag early." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Waterfront patio",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "La Mar, Embarcadero: 12-550, with waterfront patio seating 100 seated (150 standing) and multiple private rooms.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Lobby Bar",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "La Mar has the Lobby Bar which accommodates 20-30 for cocktail hours.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "the-fly-trap-sf",
+      "name": "The Fly Trap",
+      "venueType": "restaurant",
+      "addressLine1": "606 Folsom Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94107",
+      "neighborhood": "SoMa",
+      "lat": 37.785252,
+      "lon": -122.397145,
+      "cuisines": ["Californian", "Mediterranean"],
+      "priceTier": 3,
+      "website": "https://www.flytrapsf.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+      "phone": "+1 415-243-0580",
+      "eventsEmail": null,
+      "summary": "SoMa restaurant with a long history and an unusually transparent price structure — hourly for the communal tables, a day rate for the full buyout.",
+      "eventStyles": ["seated_dinner", "happy_hour", "meeting"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Communal Tables",
+          "kind": "semi_private",
+          "seatedCapacity": 20,
+          "standingCapacity": 35,
+          "features": ["Communal seating"],
+          "combinableWith": []
+        },
+        {
+          "name": "Full Restaurant Buyout",
+          "kind": "full_buyout",
+          "seatedCapacity": 70,
+          "minSpendCents": 1500000,
+          "features": ["Whole venue"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Communal Tables",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "The Fly Trap, Communal Tables: 20 seated, 35 standing, $300 hire fee per hour.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Full Restaurant Buyout",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "The Fly Trap, Full Restaurant Buyout: 70 seated, $15,000 minimum spend per day.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Full Restaurant Buyout",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "$15,000 minimum spend per day.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "joyride-pizza-yerba-buena",
+      "name": "Joyride Pizza — Yerba Buena Gardens",
+      "venueType": "restaurant",
+      "addressLine1": "730 Howard Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94103",
+      "neighborhood": "Yerba Buena",
+      "lat": 37.784725,
+      "lon": -122.401218,
+      "cuisines": ["Pizza", "American"],
+      "priceTier": 2,
+      "website": "https://www.joyridepizza.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+      "phone": null,
+      "eventsEmail": null,
+      "summary": "Casual pizza operation on Yerba Buena Gardens with an indoor restaurant and a large patio. The cheapest published minimum in the SoMa set, and the patio holds a hundred standing.",
+      "eventStyles": ["happy_hour", "reception", "buffet"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Indoor restaurant",
+          "kind": "private_room",
+          "seatedCapacity": 85,
+          "minSpendCents": 1000000,
+          "features": ["Indoor"],
+          "combinableWith": ["Outdoor Patio"]
+        },
+        {
+          "name": "Outdoor Patio",
+          "kind": "outdoor",
+          "seatedCapacity": 40,
+          "standingCapacity": 100,
+          "minSpendCents": 300000,
+          "features": ["Outdoor", "Garden-facing"],
+          "combinableWith": ["Indoor restaurant"]
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Pizza format supports vegetarian by default." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm crust options." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Indoor restaurant",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "Joyride Pizza - Yerba Buena Gardens, Indoor restaurant: 85 seated, $10,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Outdoor Patio",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "Joyride Pizza - Yerba Buena Gardens, Outdoor Patio: 40 seated, 100 standing, $3,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Outdoor Patio",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "$3,000 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Derived from the menu format rather than a stated policy.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "kaiyo-rooftop-sf",
+      "name": "Kaiyō Rooftop",
+      "venueType": "restaurant",
+      "addressLine1": "701 3rd Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94107",
+      "neighborhood": "Mission Bay",
+      "lat": 37.779391,
+      "lon": -122.392625,
+      "cuisines": ["Nikkei", "Japanese", "Peruvian"],
+      "priceTier": 3,
+      "website": "https://www.kaiyosf.com/",
+      "eventsUrl": null,
+      "phone": "+1 415-534-9004",
+      "eventsEmail": null,
+      "summary": "Nikkei rooftop on the twelfth floor of the Hyatt Place in SoMa, with semi-private lounges and a range that runs from fourteen to two hundred and fifty.",
+      "eventStyles": ["reception", "happy_hour", "seated_dinner"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Rooftop buyout",
+          "kind": "rooftop",
+          "standingCapacity": 250,
+          "seatedCapacity": 120,
+          "features": ["Rooftop", "Semi-private lounges", "City views"],
+          "combinableWith": []
+        },
+        {
+          "name": "Private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 12,
+          "features": ["Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
+        { "option": "shellfish_allergy", "dedicated": false, "notes": "Nikkei menu is seafood-led — flag early." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Rooftop buyout",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "Kaiyō Rooftop, SoMa: 14-250 with semi-private lounges.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Private dining room",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "Kaiyo offers private dining for up to 12 guests, and additional rooftop bookings for 14 to 250 guests.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "verjus-sf",
+      "name": "Verjus",
+      "venueType": "restaurant",
+      "addressLine1": "550 Washington Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94111",
+      "neighborhood": "Jackson Square",
+      "lat": 37.795236,
+      "lon": -122.400963,
+      "cuisines": ["French", "Wine bar"],
+      "priceTier": 3,
+      "website": "https://www.verjussf.com/",
+      "eventsUrl": null,
+      "phone": "+1 415-944-4600",
+      "eventsEmail": null,
+      "summary": "Wine bar and cave in Jackson Square. Better suited to a standing reception than a seated dinner — the seated ceiling is forty against a hundred standing.",
+      "eventStyles": ["reception", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Full venue",
+          "kind": "full_buyout",
+          "seatedCapacity": 40,
+          "standingCapacity": 100,
+          "features": ["Wine cave", "Full bar"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Full venue",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "Verjus, Financial District: standing receptions up to 100 people, or seated dinners with 40 or fewer.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "cotogna-sf",
+      "name": "Cotogna",
+      "venueType": "restaurant",
+      "addressLine1": "490 Pacific Avenue",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94133",
+      "neighborhood": "Jackson Square",
+      "lat": 37.797365,
+      "lon": -122.403119,
+      "cuisines": ["Italian"],
+      "priceTier": 3,
+      "website": "https://cotognasf.com/",
+      "eventsUrl": null,
+      "phone": "+1 415-775-8508",
+      "eventsEmail": null,
+      "summary": "Michael Tusk's Italian room in Jackson Square. Small private capacity — a leadership dinner rather than a team event, and at the edge of a fifteen-minute walk from the Transbay district.",
+      "eventStyles": ["seated_dinner"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Private dining",
+          "kind": "private_room",
+          "seatedCapacity": 25,
+          "minGuests": 6,
+          "features": ["Indoor and outdoor areas"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Private dining",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://www.theinfatuation.com/san-francisco/guides/best-private-dinner-restaurants-san-francisco",
+          "sourceTitle": "The SF Private Dining Directory — The Infatuation",
+          "snippet": "Cotogna, Jackson Square: 6-25 guests with both indoor and outdoor areas.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "mels-drive-in-mission",
+      "name": "Mel's Drive-In — 4th & Mission",
+      "venueType": "restaurant",
+      "addressLine1": "801 Mission Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94103",
+      "neighborhood": "Yerba Buena",
+      "lat": 37.784605,
+      "lon": -122.404505,
+      "cuisines": ["American", "Diner"],
+      "priceTier": 1,
+      "website": "https://melsdrive-in.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+      "phone": null,
+      "eventsEmail": null,
+      "summary": "Fifties diner that takes the whole space for two hundred seated. Unusual for its price point in publishing a minimum at all.",
+      "eventStyles": ["buffet", "reception", "happy_hour"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Entire Space",
+          "kind": "full_buyout",
+          "seatedCapacity": 200,
+          "minSpendCents": 500000,
+          "features": ["Whole venue", "Diner counter"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Entire Space",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "Mel's Drive-In 4TH & MISSION, Entire Space: 200 seated, $5,000 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Entire Space",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "$5,000 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    },
+    {
+      "slug": "mars-bar-sf",
+      "name": "Mars Bar & Restaurant",
+      "venueType": "bar",
+      "addressLine1": "798 Brannan Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94103",
+      "neighborhood": "SoMa",
+      "lat": 37.772811,
+      "lon": -122.408463,
+      "cuisines": ["American", "Bar food"],
+      "priceTier": 2,
+      "website": "https://www.marsbarsf.com/",
+      "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+      "phone": "+1 415-621-6277",
+      "eventsEmail": null,
+      "summary": "Bar and patio in the western end of SoMa. Two hundred standing for a reasonable minimum, but far enough out that it fails a fifteen-minute walking brief from the Transbay district.",
+      "eventStyles": ["happy_hour", "reception"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Entire Venue",
+          "kind": "full_buyout",
+          "seatedCapacity": 75,
+          "standingCapacity": 200,
+          "minSpendCents": 250000,
+          "features": ["Full bar", "Patio"],
+          "combinableWith": ["Outdoor Patio"]
+        },
+        {
+          "name": "Outdoor Patio",
+          "kind": "outdoor",
+          "seatedCapacity": 26,
+          "minSpendCents": 120000,
+          "features": ["Outdoor"],
+          "combinableWith": ["Entire Venue"]
+        }
+      ],
+      "menus": [],
+      "dietary": [],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Entire Venue",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "Mars Bar Restaurant, Entire Venue: 75 seated, 200 standing, $2,500 minimum spend.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.min_spend",
+          "space": "Entire Venue",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "$2,500 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        }
+      ]
+    }
+  ]
+}
