@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "tsx scripts/db/migrate.ts",
+    "db:seed": "tsx scripts/db/seed.ts",
+    "db:reset": "tsx scripts/db/migrate.ts --reset && tsx scripts/db/seed.ts",
+    "data:coords": "tsx scripts/data/refresh-coordinates.ts",
+    "data:check": "tsx scripts/data/check.ts",
+    "scenarios": "tsx scripts/scenarios.ts",
+    "research:extract": "tsx scripts/research/extract.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",

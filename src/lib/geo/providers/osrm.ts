@@ -38,7 +38,10 @@ async function tableChunk(
     `${PROFILE_BASE[mode]}/table/v1/driving/${coords}` +
     `?sources=0&annotations=duration,distance`;
 
-  const body = await fetchJson<OsrmTableResponse>(url, { timeoutMs: 9000 });
+  // The community instances are free and occasionally slow to warm up. A short
+  // timeout here means falling back to straight-line estimates far more often
+  // than necessary, so this is deliberately patient.
+  const body = await fetchJson<OsrmTableResponse>(url, { timeoutMs: 15000 });
   if (body.code !== "Ok" || !body.durations?.[0]) {
     throw new Error(`OSRM returned ${body.code}`);
   }
