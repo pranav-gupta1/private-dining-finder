@@ -1,0 +1,784 @@
+{
+  "market": "Waikiki, HI",
+  "methodology": "Waikiki inverts the usual pattern: the large-format capacity sits with resort banquet departments rather than restaurants, and those publish detailed capacity charts. Restaurant-side capacity is much thinner, so several entries here rest on directory listings. Distances are short enough that walking is the only sensible mode.",
+  "venues": [
+    {
+      "slug": "hilton-hawaiian-village",
+      "name": "Hilton Hawaiian Village Waikiki Beach Resort",
+      "venueType": "hotel",
+      "addressLine1": "2005 Kalia Road",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.28194,
+      "lon": -157.83722,
+      "cuisines": ["Hawaiian", "American", "Pacific Rim"],
+      "priceTier": 4,
+      "website": "https://www.hiltonhawaiianvillage.com/",
+      "eventsUrl": "https://hiltonhawaiianvillage.com/gather/venues/",
+      "phone": "+1 808-949-4321",
+      "eventsEmail": null,
+      "summary": "The resort itself, with 150,000 sq ft of function space across three conference centres. For a reception at the address a planner already gave you, this is the zero-commute answer — and the Coral Ballroom is the largest room in the state.",
+      "eventStyles": ["reception", "buffet", "seated_dinner", "meeting", "happy_hour"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Coral Ballroom",
+          "kind": "ballroom",
+          "standingCapacity": 3775,
+          "seatedCapacity": 2400,
+          "squareFeet": 27054,
+          "features": ["Divisible", "Largest ballroom in Hawaii", "Full production support"],
+          "combinableWith": []
+        },
+        {
+          "name": "Tapa Ballroom",
+          "kind": "ballroom",
+          "standingCapacity": 1900,
+          "seatedCapacity": 1200,
+          "squareFeet": 16536,
+          "features": ["Divides into three", "Adjoining Palace Lounge"],
+          "combinableWith": []
+        },
+        {
+          "name": "Rainbow Suite",
+          "kind": "private_room",
+          "standingCapacity": 273,
+          "seatedCapacity": 180,
+          "squareFeet": 2376,
+          "features": ["Lagoon views", "Adjoining Rainbow Patio"],
+          "combinableWith": []
+        },
+        {
+          "name": "The Great Lawn",
+          "kind": "outdoor",
+          "standingCapacity": 2000,
+          "seatedCapacity": 1600,
+          "features": ["Oceanfront", "Duke Kahanamoku Lagoon views", "Largest private beachfront lawn in Waikiki"],
+          "combinableWith": []
+        },
+        {
+          "name": "Village Green",
+          "kind": "outdoor",
+          "standingCapacity": 150,
+          "seatedCapacity": 100,
+          "features": ["Tropical gardens", "Waterfalls", "Koi pond"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Banquet and reception packages",
+          "format": "passed_canapes",
+          "pricePerPersonCents": null,
+          "courses": ["Passed canapés", "Stations", "Bar packages"],
+          "url": "https://hiltonhawaiianvillage.com/gather/venues/",
+          "notes": "Resort catering; per-person pricing quoted by the banquet office against the event brief."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Standard for a full-service resort banquet department." },
+        { "option": "vegan", "dedicated": true, "notes": "Standard for a full-service resort banquet department." },
+        { "option": "gluten_free", "dedicated": true, "notes": "Standard for a full-service resort banquet department." },
+        { "option": "nut_allergy", "dedicated": false, "notes": "Notify the banquet office at least two weeks out." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Coral Ballroom",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://hiltonhawaiianvillage.com/meeting-spaces/coral-ballroom/",
+          "sourceTitle": "Coral Ballroom — Hilton Hawaiian Village",
+          "snippet": "The Coral Ballroom is 27,054 sq. ft. with capacity for 3,775 guests. It is the largest capacity ballroom in the State of Hawaii.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Tapa Ballroom",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://hiltonhawaiianvillage.com/gather/meeting-spaces/",
+          "sourceTitle": "Meeting Venues — Hilton Hawaiian Village",
+          "snippet": "The Tapa Ballroom is 16,536 sq. ft. with capacity for 1,900 guests and can be divided into three separate ballrooms.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Rainbow Suite",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://hiltonhawaiianvillage.com/gather/meeting-spaces/",
+          "sourceTitle": "Meeting Venues — Hilton Hawaiian Village",
+          "snippet": "The Rainbow Suite is 2,376 square feet with classroom capacity for 153, theater capacity for 230, banquet capacity for 180 and reception capacity for 273.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "The Great Lawn",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.hiltonhawaiianvillage.com/outdoor-venues",
+          "sourceTitle": "Outdoor Venues for Events — Hilton Hawaiian Village",
+          "snippet": "The Great Lawn is Waikiki's largest private oceanfront grass lawn and can accommodate up to 1,600 guests for a banquet or 2,000 guests for a reception.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Village Green",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://hiltonhawaiianvillage.com/gather/venues/",
+          "sourceTitle": "Venues — Hilton Hawaiian Village",
+          "snippet": "Village Green accommodates 100 guests banquet-style to 150 for receptions.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published as a policy. Full-service resort banquet departments handle these as standard, but confirm counts with the catering manager.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "halekulani",
+      "name": "Halekulani",
+      "venueType": "hotel",
+      "addressLine1": "2199 Kalia Road",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.27962,
+      "lon": -157.83154,
+      "cuisines": ["Hawaiian", "French", "Pacific Rim"],
+      "priceTier": 4,
+      "website": "https://www.halekulani.com/",
+      "eventsUrl": "https://www.halekulani.com/space-category/meetings-events/",
+      "phone": "+1 808-923-2311",
+      "eventsEmail": null,
+      "summary": "The most polished banquet operation within a short walk of the Village, and the only one that publishes a full capacity chart room by room. The Garden Courtyard alone takes six hundred standing.",
+      "eventStyles": ["reception", "seated_dinner", "meeting", "buffet"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Halekulani Ballroom",
+          "kind": "ballroom",
+          "seatedCapacity": 300,
+          "standingCapacity": 500,
+          "squareFeet": 4300,
+          "features": ["Divisible", "Full AV"],
+          "combinableWith": []
+        },
+        {
+          "name": "Garden Courtyard",
+          "kind": "outdoor",
+          "standingCapacity": 600,
+          "squareFeet": 6400,
+          "features": ["Outdoor", "Tropical garden"],
+          "combinableWith": ["Garden Terrace"]
+        },
+        {
+          "name": "Hau Terrace",
+          "kind": "outdoor",
+          "seatedCapacity": 120,
+          "standingCapacity": 300,
+          "squareFeet": 5000,
+          "features": ["Oceanfront", "Under the kiawe tree"],
+          "combinableWith": []
+        },
+        {
+          "name": "Garden Terrace",
+          "kind": "outdoor",
+          "seatedCapacity": 80,
+          "squareFeet": 1300,
+          "features": ["Outdoor"],
+          "notes": "Outdoor cocktail receptions use the adjoining Garden Courtyard.",
+          "combinableWith": ["Garden Courtyard"]
+        },
+        {
+          "name": "Lewers Lounge",
+          "kind": "semi_private",
+          "standingCapacity": 50,
+          "squareFeet": 1430,
+          "features": ["Live jazz", "Cocktail bar"],
+          "combinableWith": []
+        },
+        {
+          "name": "Kalia Room",
+          "kind": "private_room",
+          "seatedCapacity": 40,
+          "squareFeet": 621,
+          "features": ["Fully private"],
+          "combinableWith": ["Kiawe Room"]
+        },
+        {
+          "name": "Kiawe Room",
+          "kind": "private_room",
+          "seatedCapacity": 40,
+          "squareFeet": 515,
+          "features": ["Fully private"],
+          "combinableWith": ["Kalia Room"]
+        }
+      ],
+      "menus": [
+        {
+          "name": "Banquet menus",
+          "format": "prix_fixe",
+          "pricePerPersonCents": null,
+          "courses": ["Appetiser", "Main", "Dessert"],
+          "url": "https://www.halekulani.com/space-category/meetings-events/",
+          "notes": "Customised by the hotel's culinary team using local ingredients."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Menus are built per event by the culinary team." },
+        { "option": "vegan", "dedicated": true, "notes": "Menus are built per event by the culinary team." },
+        { "option": "gluten_free", "dedicated": true, "notes": "Menus are built per event by the culinary team." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Halekulani Ballroom",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Halekulani Ballroom, 4,300 sq ft: banquet 300, reception 500.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Garden Courtyard",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Garden Courtyard, 6,400 sq ft: reception 600.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Hau Terrace",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Hau Terrace, ~5,000 sq ft: banquet 120, reception 300.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Garden Terrace",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Garden Terrace, ~1,300 sq ft: banquet 80. Outdoor cocktail receptions utilize the adjoining Garden Courtyard.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Lewers Lounge",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Lewers Lounge, 1,430 sq ft: reception 50.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Kalia Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Kalia Room, 621 sq ft: banquet 20-40.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Kiawe Room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Kiawe Room, 515 sq ft: banquet 20-40.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "2199 Kalia Road, Honolulu, HI 96815. (808) 923-2311.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.halekulani.com/space-category/meetings-events/",
+          "sourceTitle": "Meetings & Events — Halekulani",
+          "snippet": "Banquet menus are customized by the hotel's culinary team using fresh Hawaiian ingredients.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "sheraton-waikiki",
+      "name": "Sheraton Waikiki Beach Resort",
+      "venueType": "hotel",
+      "addressLine1": "2255 Kalakaua Avenue",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.27957,
+      "lon": -157.82949,
+      "cuisines": ["Hawaiian", "American"],
+      "priceTier": 3,
+      "website": "https://www.marriott.com/en-us/hotels/hnlws-sheraton-waikiki-beach-resort/overview/",
+      "eventsUrl": "https://www.marriott.com/en-us/hotels/hnlws-sheraton-waikiki-beach-resort/events/",
+      "phone": "+1 808-922-4422",
+      "eventsEmail": null,
+      "summary": "Home of the Hawaii Ballroom, the largest in Waikiki at 26,000 sq ft. Enormously over-sized for two hundred people, but it divides, and the property is a ten-minute walk down the beach path.",
+      "eventStyles": ["reception", "buffet", "seated_dinner", "meeting"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Hawaii Ballroom",
+          "kind": "ballroom",
+          "standingCapacity": 3500,
+          "seatedCapacity": 2460,
+          "squareFeet": 26000,
+          "features": ["Divisible", "Largest ballroom in Waikiki", "Full production support"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Standard for a resort banquet department; confirm counts." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Hawaii Ballroom",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://thevendry.com/venue/151163/sheraton-waikiki-honolulu-hi/space/73510",
+          "sourceTitle": "Hawaii Ballroom at Sheraton Waikiki — The Vendry",
+          "snippet": "The Hawaii Ballroom is 26,000 square feet and is the largest in Waikiki. For receptions it has a capacity of 3,500 guests, and can accommodate 3,700 guests theater style or 2,460 for a banquet.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Hawaii Ballroom",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.businesstravelnews.com/Hotels/Honolulu/Sheraton-Waikiki-Beach-Resort/Meetings-Events-p59665156",
+          "sourceTitle": "Sheraton Waikiki Beach Resort Meetings & Events — Business Travel News",
+          "snippet": "Hawaii Ballroom, 26,000 sq ft, the largest ballroom in Waikiki.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "sky-waikiki",
+      "name": "SKY Waikiki",
+      "venueType": "restaurant",
+      "addressLine1": "2270 Kalakaua Avenue",
+      "addressLine2": "19th Floor",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.27931,
+      "lon": -157.82797,
+      "cuisines": ["American", "Pacific Rim"],
+      "priceTier": 3,
+      "website": "https://skywaikiki.com/",
+      "eventsUrl": "https://skywaikiki.com/private-events/",
+      "phone": "+1 808-900-4200",
+      "eventsEmail": null,
+      "summary": "Nineteenth-floor rooftop over Kalakaua with a 2,000 sq ft open deck. The strongest reception-format fit in the walkable set — the whole venue takes five hundred, and it is built for standing.",
+      "eventStyles": ["reception", "happy_hour", "seated_dinner"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Full venue buyout",
+          "kind": "rooftop",
+          "standingCapacity": 500,
+          "squareFeet": 9000,
+          "features": ["Open-air deck", "Ocean and Diamond Head views", "Full bar", "DJ setup"],
+          "notes": "7,000 sq ft indoor venue plus a 2,000 sq ft outdoor deck.",
+          "combinableWith": []
+        },
+        {
+          "name": "Private dining room",
+          "kind": "private_room",
+          "seatedCapacity": 15,
+          "features": ["Fully private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Full venue buyout",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://skywaikiki.com/private-events/",
+          "sourceTitle": "Private Events — SKY Waikiki",
+          "snippet": "From an intimate gathering for 15 in our private dining room up to 500 people. A 7,000 square-foot venue with a 2,000 square-foot outdoor deck.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Private dining room",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://skywaikiki.com/private-events/",
+          "sourceTitle": "Private Events — SKY Waikiki",
+          "snippet": "An intimate gathering for 15 in our private dining room.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://skywaikiki.com/private-events/",
+          "sourceTitle": "Private Events — SKY Waikiki",
+          "snippet": "2270 Kalakaua Ave. 19th Floor, Honolulu, HI. 808-900-4200.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "hideout-at-the-laylow",
+      "name": "Hideout at The Laylow",
+      "venueType": "restaurant",
+      "addressLine1": "2299 Kuhio Avenue",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.28005,
+      "lon": -157.82755,
+      "cuisines": ["Hawaiian", "Modern Hapa"],
+      "priceTier": 3,
+      "website": "https://www.laylowwaikiki.com/",
+      "eventsUrl": "https://www.hideoutwaikiki.com/events-hosting/",
+      "phone": "+1 808-628-3060",
+      "eventsEmail": "laylowreservations@laylowwaikiki.com",
+      "summary": "Poolside rooftop restaurant at The Laylow, sized almost exactly for two hundred. Publishes a direct events email, which puts it ahead of most of the Waikiki restaurant set on contactability.",
+      "eventStyles": ["reception", "happy_hour", "seated_dinner"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Full venue buyout",
+          "kind": "rooftop",
+          "standingCapacity": 200,
+          "squareFeet": 1500,
+          "features": ["Rooftop", "Live entertainment", "Poolside", "Craft cocktails"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Full venue buyout",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.hideoutwaikiki.com/events-hosting/",
+          "sourceTitle": "Waikiki Event Spaces — Hideout",
+          "snippet": "Over 1,500 sq. ft. of stylish event space, accommodating up to 200 guests, including full venue buyouts.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.contact",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.hideoutwaikiki.com/events-hosting/",
+          "sourceTitle": "Waikiki Event Spaces — Hideout",
+          "snippet": "2299 Kuhio Ave, Honolulu, HI 96815. 808-628-3060. laylowreservations@laylowwaikiki.com.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "hard-rock-cafe-honolulu",
+      "name": "Hard Rock Cafe Honolulu",
+      "venueType": "restaurant",
+      "addressLine1": "280 Beach Walk",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.2804,
+      "lon": -157.8306,
+      "cuisines": ["American"],
+      "priceTier": 2,
+      "website": "https://cafe.hardrock.com/honolulu/",
+      "eventsUrl": "https://www.cvent.com/venues/honolulu/special-event-venue/hard-rock-cafe-honolulu/venue-9a47f745-f41d-44a1-8521-f6f33de56b14",
+      "phone": "+1 808-955-7383",
+      "eventsEmail": null,
+      "summary": "Nine minutes' walk from the Village, and the indoor room plus lanai together clear three hundred and fifty standing. Unglamorous, but it is the cheapest way to put two hundred people in one room nearby.",
+      "eventStyles": ["reception", "happy_hour", "buffet"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Inside restaurant",
+          "kind": "private_room",
+          "seatedCapacity": 116,
+          "standingCapacity": 200,
+          "features": ["Indoor", "Stage", "Full AV"],
+          "combinableWith": ["Lanai"]
+        },
+        {
+          "name": "Lanai",
+          "kind": "outdoor",
+          "seatedCapacity": 96,
+          "standingCapacity": 150,
+          "features": ["Outdoor", "Covered"],
+          "combinableWith": ["Inside restaurant"]
+        },
+        {
+          "name": "Semi-private cove",
+          "kind": "semi_private",
+          "seatedCapacity": 24,
+          "standingCapacity": 30,
+          "features": ["Semi-private"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [
+        {
+          "name": "Group buffet",
+          "format": "buffet",
+          "pricePerPersonCents": null,
+          "courses": ["Starters", "Mains", "Dessert"],
+          "url": "https://cafe.hardrock.com/honolulu/",
+          "notes": "Group packages quoted per event."
+        }
+      ],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
+        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Inside restaurant",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.cvent.com/venues/honolulu/special-event-venue/hard-rock-cafe-honolulu/venue-9a47f745-f41d-44a1-8521-f6f33de56b14",
+          "sourceTitle": "Hard Rock Cafe Honolulu — Cvent",
+          "snippet": "The inside restaurant seats up to 116 people, or up to 200 for reception style.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Lanai",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.uniquevenues.com/venue/hard-rock-cafe-honolulu/",
+          "sourceTitle": "Hard Rock Cafe Honolulu — Unique Venues",
+          "snippet": "The lanai accommodates up to 96 people, or up to 150 for reception style.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Semi-private cove",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.cvent.com/venues/honolulu/special-event-venue/hard-rock-cafe-honolulu/venue-9a47f745-f41d-44a1-8521-f6f33de56b14",
+          "sourceTitle": "Hard Rock Cafe Honolulu — Cvent",
+          "snippet": "There is a semi-private cove that seats up to 24 people, or up to 30 for reception style.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "kani-ka-pila-grille",
+      "name": "Kani Ka Pila Grille",
+      "venueType": "restaurant",
+      "addressLine1": "2169 Kalia Road",
+      "addressLine2": "Outrigger Reef Waikiki Beach Resort",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.28022,
+      "lon": -157.83277,
+      "cuisines": ["Hawaiian", "American"],
+      "priceTier": 2,
+      "website": "https://www.outrigger.com/hawaii/oahu/outrigger-reef-waikiki-beach-resort/food-drinks/kani-ka-pila-grille",
+      "eventsUrl": "https://www.outrigger.com/hawaii/oahu/outrigger-reef-waikiki-beach-resort/meetings",
+      "phone": "+1 808-924-4990",
+      "eventsEmail": null,
+      "summary": "Live Hawaiian music every night in a garden beside a waterfall, seven minutes' walk from the Village. Caps out at seventy-five, so it is a breakout-dinner option rather than an answer for two hundred.",
+      "eventStyles": ["seated_dinner", "happy_hour", "reception"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Private garden",
+          "kind": "outdoor",
+          "seatedCapacity": 75,
+          "squareFeet": 1675,
+          "features": ["Waterfall", "Live Hawaiian music", "Outdoor"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Private garden",
+          "sourceKind": "venue_site",
+          "sourceUrl": "https://www.outrigger.com/hawaii/oahu/outrigger-reef-waikiki-beach-resort/meetings",
+          "sourceTitle": "Banquet Halls & Event Space at Outrigger Reef Waikiki Beach Resort",
+          "snippet": "The Kani Ka Pila Grille has a private garden next to a waterfall available for large groups or parties, with a maximum capacity of 75 and a floor size of 1,675 square feet.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "maui-brewing-waikiki",
+      "name": "Maui Brewing Co. Waikiki",
+      "venueType": "brewery",
+      "addressLine1": "2300 Kalakaua Avenue",
+      "addressLine2": "Waikiki Beachcomber, 3rd Floor",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.27983,
+      "lon": -157.82688,
+      "cuisines": ["American", "Brewery"],
+      "priceTier": 2,
+      "website": "https://www.mbcrestaurants.com/waikiki/",
+      "eventsUrl": null,
+      "phone": "+1 808-843-2739",
+      "eventsEmail": null,
+      "summary": "The largest bar in Waikiki, on the third floor of the Beachcomber. Takes four hundred and sixty across the whole space but has no dedicated private room, so a two-hundred-person reception means a partial or full buyout.",
+      "eventStyles": ["happy_hour", "reception", "buffet"],
+      "acceptsBuyout": true,
+      "spaces": [
+        {
+          "name": "Entire restaurant and bar",
+          "kind": "full_buyout",
+          "standingCapacity": 460,
+          "seatedCapacity": 300,
+          "features": ["Open air", "Largest bar in Waikiki", "House-brewed beer"],
+          "notes": "No dedicated private dining room; groups are handled by section or buyout.",
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Entire restaurant and bar",
+          "sourceKind": "editorial",
+          "sourceUrl": "https://tastyislandhawaii.com/2018/04/18/private-parties-at-maui-brewing-company-waikiki/",
+          "sourceTitle": "Private Parties at Maui Brewing Company Waikiki — Tasty Island",
+          "snippet": "The entire restaurant can accommodate up to 460 guests. There is no private dining room, but the space can handle larger groups with a call ahead for group seating or special arrangements.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "slug": "the-royal-hawaiian",
+      "name": "The Royal Hawaiian",
+      "venueType": "hotel",
+      "addressLine1": "2259 Kalakaua Avenue",
+      "city": "Honolulu",
+      "region": "HI",
+      "postalCode": "96815",
+      "neighborhood": "Waikiki",
+      "lat": 21.27693,
+      "lon": -157.82742,
+      "cuisines": ["Hawaiian", "American"],
+      "priceTier": 4,
+      "website": "https://www.marriott.com/en-us/hotels/hnllc-the-royal-hawaiian-a-luxury-collection-resort-waikiki/overview/",
+      "eventsUrl": "https://www.marriott.com/en-us/hotels/hnllc-the-royal-hawaiian-a-luxury-collection-resort-waikiki/events/",
+      "phone": "+1 808-923-7311",
+      "eventsEmail": null,
+      "summary": "The Pink Palace. The Monarch Room seats three hundred and fifty with a stage and Diamond Head behind it. Sits right at the edge of a fifteen-minute walk from the Village — worth checking whether the brief has any give.",
+      "eventStyles": ["reception", "seated_dinner", "buffet"],
+      "acceptsBuyout": false,
+      "spaces": [
+        {
+          "name": "Monarch Room",
+          "kind": "ballroom",
+          "seatedCapacity": 350,
+          "squareFeet": 7800,
+          "features": ["Signature stage", "Floor-to-ceiling windows", "Beachfront", "Private lawn"],
+          "combinableWith": []
+        }
+      ],
+      "menus": [],
+      "dietary": [
+        { "option": "vegetarian", "dedicated": true, "notes": "Standard for a resort banquet department; confirm counts." }
+      ],
+      "evidence": [
+        {
+          "field": "space.capacity",
+          "space": "Monarch Room",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.historichotels.org/us/hotels-resorts/the-royal-hawaiian-a-luxury-collection-resort/meetings.php",
+          "sourceTitle": "Event Venue in Honolulu — The Royal Hawaiian, Historic Hotels of America",
+          "snippet": "The Monarch Room is 7,800 square feet and seats 350 for dinner, or 400 theater-style, and features a signature stage.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Monarch Room",
+          "sourceKind": "directory",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/hnllc-the-royal-hawaiian-a-luxury-collection-resort-waikiki/events/",
+          "sourceTitle": "Events & Weddings — The Royal Hawaiian",
+          "snippet": "The Monarch Room can accommodate up to 300 guests banquet style, with floor-to-ceiling windows and a private lawn.",
+          "observedAt": "2026-08-11"
+        },
+        {
+          "field": "venue.dietary",
+          "sourceKind": "inferred",
+          "snippet": "Not published.",
+          "observedAt": "2026-08-11"
+        }
+      ]
+    }
+  ]
+}
