@@ -45,7 +45,7 @@ const base: Omit<SearchRequest, "address" | "headcount" | "maxCommuteMinutes" | 
   includeUnverified: true,
 };
 
-describe("scenario 1 — 50 people near Times Square, under a 20 minute walk", () => {
+describe("scenario 1: 50 people near Times Square, under a 20 minute walk", () => {
   const results = search(ORIGINS.timesSquare, {
     ...base,
     address: "Times Square, New York, NY",
@@ -79,7 +79,7 @@ describe("scenario 1 — 50 people near Times Square, under a 20 minute walk", (
   });
 });
 
-describe("scenario 2 — 30 people near Salesforce Tower, under a 15 minute walk", () => {
+describe("scenario 2: 30 people near Salesforce Tower, under a 15 minute walk", () => {
   const results = search(ORIGINS.salesforceTower, {
     ...base,
     address: "415 Mission St, San Francisco, CA 94105",
@@ -109,7 +109,7 @@ describe("scenario 2 — 30 people near Salesforce Tower, under a 15 minute walk
   });
 });
 
-describe("scenario 3 — 200 people, reception, under a 15 minute walk from Hilton Hawaiian Village", () => {
+describe("scenario 3: 200 people, reception, under a 15 minute walk from Hilton Hawaiian Village", () => {
   const results = search(ORIGINS.hiltonHawaiianVillage, {
     ...base,
     address: "Hilton Hawaiian Village Waikiki Beach Resort, Waikiki, HI",
@@ -130,7 +130,7 @@ describe("scenario 3 — 200 people, reception, under a 15 minute walk from Hilt
     }
   });
 
-  it("puts the resort's own space first — it is a zero minute walk", () => {
+  it("puts the resort's own space first, since it is a zero minute walk", () => {
     expect(within[0].venue.slug).toBe("hilton-hawaiian-village");
     expect(within[0].commute.durationMinutes).toBeLessThan(1);
   });

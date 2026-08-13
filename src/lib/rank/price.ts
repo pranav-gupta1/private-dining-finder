@@ -100,7 +100,7 @@ export function priceSignal(
     tier: null,
     currency: "USD",
     trust: "unverified",
-    label: "No price published — ask on the call",
+    label: "No price published. Ask on the call",
   };
 }
 

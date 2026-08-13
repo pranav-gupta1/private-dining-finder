@@ -157,12 +157,12 @@ function describe(candidate: Candidate, headcount: number, style: EventStyle): s
   const names = candidate.spaces.map((s) => s.name);
 
   if (candidate.arrangement === "full_buyout") {
-    return `Full buyout holds ${candidate.capacity} ${noun} — fits ${headcount}.`;
+    return `Full buyout holds ${candidate.capacity} ${noun}, fits ${headcount}.`;
   }
   if (candidate.arrangement === "combined_rooms") {
-    return `${names.join(" + ")} combine for ${candidate.capacity} ${noun} — fits ${headcount}.`;
+    return `${names.join(" + ")} combine for ${candidate.capacity} ${noun}, fits ${headcount}.`;
   }
-  return `${names[0]} holds ${candidate.capacity} ${noun} — fits ${headcount}.`;
+  return `${names[0]} holds ${candidate.capacity} ${noun}, fits ${headcount}.`;
 }
 
 export function bestCapacityFit(

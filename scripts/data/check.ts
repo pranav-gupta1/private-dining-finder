@@ -39,7 +39,7 @@ function main() {
       if (centre) {
         const km = haversineMeters(centre, venue) / 1000;
         if (km > centre.radiusKm) {
-          add("error", `is ${km.toFixed(1)} km from the ${file.market} centre — check the coordinates`);
+          add("error", `is ${km.toFixed(1)} km from the ${file.market} centre, so check the coordinates`);
         }
       }
 
@@ -51,7 +51,7 @@ function main() {
         }
         const peak = Math.max(space.seatedCapacity ?? 0, space.standingCapacity ?? 0);
         if (peak > 5000) {
-          add("warning", `space "${space.name}" holds ${peak} — verify, that is stadium scale`);
+          add("warning", `space "${space.name}" holds ${peak}, which is stadium scale, so verify it`);
         }
         if (space.minGuests && peak && space.minGuests > peak) {
           add("error", `space "${space.name}" has a minimum above its own capacity`);
@@ -83,12 +83,12 @@ function main() {
       for (const space of venue.spaces) {
         const covered = capacityEvidence.some((e) => e.space === space.name || !e.space);
         if (!covered) {
-          add("warning", `space "${space.name}" has no capacity evidence — it will rank as unverified`);
+          add("warning", `space "${space.name}" has no capacity evidence, so it will rank as unverified`);
         }
       }
 
       if (!venue.phone && !venue.eventsEmail && !venue.eventsUrl) {
-        add("warning", "no phone, email or enquiry URL — a planner cannot act on this");
+        add("warning", "no phone, email or enquiry URL, so a planner cannot act on this");
       }
     }
   }

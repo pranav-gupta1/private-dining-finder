@@ -149,7 +149,7 @@ export function ResultCard({
               reason={
                 price.kind === "min_spend" || price.kind === "per_person"
                   ? "Published figure, normalised to a per-head number for this headcount."
-                  : "No minimum spend published — this is a tier hint, not a quote."
+                  : "No minimum spend published. This is a tier hint, not a quote."
               }
               evidence={priceEvidence}
               label={price.trust === "verified" ? "Verified" : price.trust === "likely" ? "Likely" : "Ask"}

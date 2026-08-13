@@ -18,7 +18,7 @@ export function buildOutreachDraft(
   const questions: string[] = [];
 
   questions.push(
-    `Availability for ${request.headcount} guests — we are looking at ${STYLE_PHRASE[request.style]}.`,
+    `Availability for ${request.headcount} guests. We are looking at ${STYLE_PHRASE[request.style]}.`,
   );
 
   if (fit.trust === "verified") {
@@ -27,7 +27,7 @@ export function buildOutreachDraft(
     );
   } else {
     questions.push(
-      `We have ${fit.label} listed at ${fit.capacity} for this format, but not from your own site — could you confirm the correct capacity?`,
+      `We have ${fit.label} listed at ${fit.capacity} for this format, but not from your own site. Could you confirm the correct capacity?`,
     );
   }
 
@@ -40,7 +40,7 @@ export function buildOutreachDraft(
 
   if (price.kind === "min_spend" || price.kind === "per_person") {
     questions.push(
-      `We have ${price.label.toLowerCase()} on file — is that current, and does it include tax and service?`,
+      `We have ${price.label.toLowerCase()} on file. Is that current, and does it include tax and service?`,
     );
   } else {
     questions.push(
@@ -58,7 +58,7 @@ export function buildOutreachDraft(
   );
   if (uncovered.length > 0) {
     questions.push(
-      `We will need ${uncovered.map((o) => titleise(o).toLowerCase()).join(", ")} covered — how do you usually handle that at this headcount?`,
+      `We will need ${uncovered.map((o) => titleise(o).toLowerCase()).join(", ")} covered. How do you usually handle that at this headcount?`,
     );
   } else if (dietary.length === 0) {
     questions.push("How do you handle dietary restrictions for a group this size?");
@@ -67,12 +67,12 @@ export function buildOutreachDraft(
   questions.push("What are the AV options in the room, and is there a dedicated bar?");
   questions.push("What is the hold and cancellation policy?");
 
-  const subject = `Private dining enquiry — ${request.headcount} guests, ${venue.name}`;
+  const subject = `Private dining enquiry for ${request.headcount} guests, ${venue.name}`;
 
   const body = [
     "Hi,",
     "",
-    `I am putting together ${STYLE_PHRASE[request.style]} for ${request.headcount} people and ${venue.name} is on our shortlist — it is roughly ${formatDuration(commute.durationMinutes)} ${commute.mode === "walking" ? "on foot" : "by car"} from where the group will be coming from.`,
+    `I am putting together ${STYLE_PHRASE[request.style]} for ${request.headcount} people and ${venue.name} is on our shortlist. It is roughly ${formatDuration(commute.durationMinutes)} ${commute.mode === "walking" ? "on foot" : "by car"} from where the group will be coming from.`,
     "",
     "A few things I need before we can put it forward:",
     "",

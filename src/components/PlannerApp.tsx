@@ -413,7 +413,7 @@ function EmptyState({ request }: { request: SearchRequest }) {
       <p className="mx-auto mt-1 max-w-sm text-[13px] leading-relaxed text-ink-500">
         No venue in the catalogue has a space for {request.headcount} within{" "}
         {request.maxCommuteMinutes} minutes of that address. Try widening the commute, lowering the
-        headcount, or switching the format — a reception fits into far more rooms than a seated
+        headcount, or switching the format. A reception fits into far more rooms than a seated
         dinner does.
       </p>
       <p className="mx-auto mt-3 flex items-center justify-center gap-1.5 text-[11px] text-ink-400">

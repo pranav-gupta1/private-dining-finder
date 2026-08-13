@@ -52,7 +52,7 @@ export async function runSearch(request: SearchRequest): Promise<SearchResponse>
 
   if (source === "snapshot") {
     notes.push(
-      "Served from the committed venue snapshot — Supabase is not configured for this environment.",
+      "Served from the committed venue snapshot. Supabase is not configured for this environment.",
     );
   }
 

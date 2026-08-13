@@ -91,7 +91,7 @@ describe("fitQuality", () => {
     expect(fitQuality(75, 50)).toBe(1);
   });
 
-  it("penalises an exact fit — there is no room for a bar or AV", () => {
+  it("penalises an exact fit, since there is no room for a bar or AV", () => {
     expect(fitQuality(50, 50)).toBeLessThan(0.8);
   });
 

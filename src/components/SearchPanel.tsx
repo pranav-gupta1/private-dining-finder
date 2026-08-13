@@ -275,7 +275,7 @@ export function SearchPanel({
           <Car size={13} className="mt-0.5 shrink-0" aria-hidden />
         )}
         Commute times are door-to-door {value.travelMode === "walking" ? "walking" : "driving"}{" "}
-        routes. This tool researches and ranks options — it does not hold or book anything.
+        routes. This tool researches and ranks options. It does not hold or book anything.
       </p>
     </form>
   );

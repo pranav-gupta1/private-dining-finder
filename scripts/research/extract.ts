@@ -79,11 +79,11 @@ standard is journalistic rather than helpful:
    figure, never convert between seated and standing capacity, never infer a capacity from square
    footage. If a page gives a range like "20-40 guests", record the upper bound.
 2. Every space MUST carry a sourceSnippet quoting the page verbatim. If you cannot quote it, you
-   cannot claim it — leave the field null instead.
+   cannot claim it. Leave the field null instead.
 3. "Seated", "banquet" and "dinner" are the same measure. "Standing", "reception" and "cocktail"
    are the same measure. Do not mix them.
 4. Money is in cents. $10,000 is 1000000. $112 per person is 11200.
-5. If the page is not actually a private events page — a 404, a cookie wall, a generic menu — return
+5. If the page is not actually a private events page (a 404, a cookie wall, a generic menu), return
    an empty spaces array and say so in reviewNotes.
 6. Put anything ambiguous in reviewNotes rather than resolving it yourself. A human checks this
    output before it is used.`;
@@ -157,8 +157,8 @@ const arg = (name: string) =>
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY) {
     console.error(
-      "ANTHROPIC_API_KEY is not set. This script is only needed to regenerate the dataset —\n" +
-        "the committed venue data in src/data/venues is its output, and the app never calls it.",
+      "ANTHROPIC_API_KEY is not set. This script is only needed to regenerate the dataset.\n" +
+        "The committed venue data in src/data/venues is its output, and the app never calls it.",
     );
     process.exit(1);
   }
@@ -195,7 +195,7 @@ async function main() {
 
   console.log(
     "\nDrafts written. Check each capacity against its sourceSnippet before merging into\n" +
-      "src/data/venues — the pipeline proposes, a person decides.",
+      "src/data/venues. The pipeline proposes, a person decides.",
   );
 }
 

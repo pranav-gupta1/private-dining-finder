@@ -228,7 +228,7 @@ function styleDetail(venue: Venue, style: EventStyle, score: number): string {
   const pretty = style.replace(/_/g, " ");
   if (score === 1) return `Venue lists ${pretty} as a format it hosts`;
   if (score > 0.5) return `Space type suits a ${pretty}, though the venue does not advertise it`;
-  return `No published ${pretty} programme — confirm the format works`;
+  return `No published ${pretty} programme, so confirm the format works`;
 }
 
 function dietaryDetail(
@@ -252,7 +252,7 @@ function trustReason(capacity: TrustLevel, price: TrustLevel): string {
     return "Capacity and pricing both come from the venue.";
   }
   if (capacity === "verified") return "Capacity confirmed by the venue; pricing needs checking.";
-  if (capacity === "likely") return "Capacity from a third-party listing — worth confirming.";
+  if (capacity === "likely") return "Capacity from a third-party listing, worth confirming.";
   return "Capacity is not published anywhere we can see. Call before shortlisting.";
 }
 
@@ -267,7 +267,7 @@ function buildHighlights(
   const verb = commute.mode === "walking" ? "walk" : "drive";
 
   if (commute.durationMinutes <= request.maxCommuteMinutes * 0.5) {
-    out.push(`${formatDuration(commute.durationMinutes)} ${verb} — well inside the limit`);
+    out.push(`${formatDuration(commute.durationMinutes)} ${verb}, well inside the limit`);
   }
   if (fit.arrangement === "single_room" && fit.utilisation >= 1.1 && fit.utilisation <= 1.6) {
     out.push(`${fit.label} is sized right for ${request.headcount}`);
@@ -298,22 +298,22 @@ function buildWarnings(
     );
   }
   if (commute.estimated) {
-    out.push("Commute is a straight-line estimate — the routing service did not respond");
+    out.push("Commute is a straight-line estimate because the routing service did not respond");
   }
   if (fit.arrangement === "combined_rooms") {
-    out.push("Requires combining rooms — confirm the wall actually opens");
+    out.push("Requires combining rooms, so confirm the wall actually opens");
   }
   if (fit.arrangement === "full_buyout") {
     out.push("Only works as a full buyout");
   }
   if (fit.utilisation < 1.1) {
-    out.push("Room is at near-capacity for this group — tight with AV or a bar");
+    out.push("Room is at near-capacity for this group, tight with AV or a bar");
   }
   if (fit.utilisation > 3) {
-    out.push(`Space holds ${fit.capacity} — will feel empty with ${request.headcount}`);
+    out.push(`Space holds ${fit.capacity}, so it will feel empty with ${request.headcount}`);
   }
   if (fit.trust !== "verified") {
-    out.push("Capacity is not first-party — confirm before it goes in a deck");
+    out.push("Capacity is not first-party, so confirm before it goes in a deck");
   }
   if (price.kind === "unknown" || price.kind === "price_tier") {
     out.push("No published minimum spend");
@@ -325,7 +325,7 @@ function buildWarnings(
     out.push(`Room has a ${Math.max(...minGuests)} guest minimum`);
   }
   if (!venue.phone && !venue.eventsEmail) {
-    out.push("No direct contact published — enquiry form only");
+    out.push("No direct contact published, enquiry form only");
   }
 
   return out;

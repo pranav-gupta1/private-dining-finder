@@ -62,7 +62,7 @@ export function resolveFieldTrust(
   if (relevant.length === 0) {
     return {
       level: "unverified",
-      reason: "No published source found — confirm with the venue.",
+      reason: "No published source found. Confirm with the venue.",
       best: null,
       supporting: [],
     };
@@ -130,5 +130,5 @@ export function trustRank(level: TrustLevel): number {
 export const TRUST_DISPLAY: Record<TrustLevel, { label: string; short: string }> = {
   verified: { label: "Verified", short: "Verified" },
   likely: { label: "Likely", short: "Likely" },
-  unverified: { label: "Unverified — needs a call", short: "Needs a call" },
+  unverified: { label: "Unverified, needs a call", short: "Needs a call" },
 };

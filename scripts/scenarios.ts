@@ -78,7 +78,7 @@ async function main() {
       const { venue, commute, fit, price } = result;
       const flag = result.withinCommute ? "" : "  << outside the commute limit";
       console.log(
-        `${String(i + 1).padStart(2)}. ${venue.name}  —  ${result.score.toFixed(1)} ${TRUST_MARK[result.trust]}${flag}`,
+        `${String(i + 1).padStart(2)}. ${venue.name}  |  ${result.score.toFixed(1)} ${TRUST_MARK[result.trust]}${flag}`,
       );
       console.log(`    ${venue.addressLine1}, ${venue.city}, ${venue.region}`);
       console.log(

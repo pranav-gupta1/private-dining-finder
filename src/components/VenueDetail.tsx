@@ -154,7 +154,7 @@ export function VenueDetail({
             {price.perPersonCents != null
               ? ` · ${formatMoney(price.perPersonCents)} per head at ${fit.headcount} guests`
               : ""}{" "}
-            — {TRUST_DISPLAY[price.trust].label.toLowerCase()}.
+            ({TRUST_DISPLAY[price.trust].label.toLowerCase()}).
           </p>
         </footer>
       </aside>
@@ -214,17 +214,17 @@ function SpacesTab({ result }: { result: RankedVenue }) {
                     ) : null}
                   </td>
                   <td className="tnum px-3 py-2 text-right text-ink-900">
-                    {space.seatedCapacity ?? "—"}
+                    {space.seatedCapacity ?? "-"}
                   </td>
                   <td className="tnum px-3 py-2 text-right text-ink-900">
-                    {space.standingCapacity ?? "—"}
+                    {space.standingCapacity ?? "-"}
                   </td>
                   <td className="tnum px-3 py-2 text-right text-ink-900">
                     {space.minSpendCents
                       ? formatMoney(space.minSpendCents)
                       : space.perPersonCents
                         ? `${formatMoney(space.perPersonCents)}/pp`
-                        : "—"}
+                        : "-"}
                   </td>
                 </tr>
               );
@@ -251,8 +251,8 @@ function SpacesTab({ result }: { result: RankedVenue }) {
         </h3>
         {venue.dietary.length === 0 ? (
           <p className="mt-1 text-[13px] text-ink-500">
-            Nothing published. Ask on the call — for a group this size it will need confirming in
-            writing anyway.
+            Nothing published. Ask on the call, because for a group this size it will need
+            confirming in writing anyway.
           </p>
         ) : (
           <ul className="mt-1.5 space-y-1">
@@ -411,7 +411,7 @@ function OutreachTab({ result, request }: { result: RankedVenue; request: Search
     <div className="space-y-3">
       <p className="text-[12px] leading-relaxed text-ink-500">
         A first-contact email built from this search, with the questions this venue&rsquo;s record is
-        actually missing. Nothing is sent from here — copy it, or open it in your mail client.
+        actually missing. Nothing is sent from here. Copy it, or open it in your mail client.
       </p>
 
       <div className="rounded-xl ring-1 ring-ink-200">
