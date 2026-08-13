@@ -98,12 +98,14 @@ export function PlannerApp({ catalogue }: { catalogue: { venues: number; spaces:
     }
   }, []);
 
-  // Run the first scenario on load so the tool opens with something in it.
+  // Run the first scenario on load so the tool opens with something in it,
+  // deferred a frame so the shell and skeletons paint before the request goes out.
   useEffect(() => {
-    void search(PRESETS[0].request);
+    const frame = requestAnimationFrame(() => void search(PRESETS[0].request));
+    return () => cancelAnimationFrame(frame);
   }, [search]);
 
-  const results = response?.results ?? [];
+  const results = useMemo(() => response?.results ?? [], [response]);
   const within = useMemo(
     () => sortResults(results.filter((r) => r.withinCommute), sort),
     [results, sort],

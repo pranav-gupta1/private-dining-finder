@@ -410,7 +410,7 @@ function OutreachTab({ result, request }: { result: RankedVenue; request: Search
   return (
     <div className="space-y-3">
       <p className="text-[12px] leading-relaxed text-ink-500">
-        A first-contact email built from this search, with the questions this venue's record is
+        A first-contact email built from this search, with the questions this venue&rsquo;s record is
         actually missing. Nothing is sent from here — copy it, or open it in your mail client.
       </p>
 
