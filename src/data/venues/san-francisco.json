@@ -13,14 +13,21 @@
       "neighborhood": "Rincon Hill",
       "lat": 37.789471,
       "lon": -122.390694,
-      "cuisines": ["New American", "Californian"],
+      "cuisines": [
+        "New American",
+        "Californian"
+      ],
       "priceTier": 4,
       "website": "https://www.prospectsf.com/",
       "eventsUrl": "https://www.prospectsf.com/private-events/",
       "phone": "+1 415-247-7770",
       "eventsEmail": "events@prospectsf.com",
       "summary": "From the Boulevard team, five minutes' walk from Salesforce Tower. The Candace Room has its own reception area and full bar, which is the difference between a dinner and a dinner people arrive at properly.",
-      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "reception",
+        "meeting"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -28,23 +35,36 @@
           "kind": "private_room",
           "seatedCapacity": 50,
           "standingCapacity": 65,
-          "features": ["Floor-to-ceiling windows", "Pre-dinner reception area", "Full bar"],
-          "combinableWith": ["Semi-private space"]
+          "features": [
+            "Floor-to-ceiling windows",
+            "Pre-dinner reception area",
+            "Full bar"
+          ],
+          "combinableWith": [
+            "Semi-private space"
+          ]
         },
         {
           "name": "Semi-private space",
           "kind": "semi_private",
           "seatedCapacity": 30,
           "standingCapacity": 40,
-          "features": ["Reclaimed wood", "Loft-like"],
-          "combinableWith": ["The Candace Room"]
+          "features": [
+            "Reclaimed wood",
+            "Loft-like"
+          ],
+          "combinableWith": [
+            "The Candace Room"
+          ]
         },
         {
           "name": "Full restaurant buyout",
           "kind": "full_buyout",
           "seatedCapacity": 150,
           "standingCapacity": 200,
-          "features": ["Whole venue"],
+          "features": [
+            "Whole venue"
+          ],
           "combinableWith": []
         }
       ],
@@ -53,14 +73,26 @@
           "name": "Private event menu",
           "format": "prix_fixe",
           "pricePerPersonCents": null,
-          "courses": ["First", "Main", "Dessert"],
+          "courses": [
+            "First",
+            "Main",
+            "Dessert"
+          ],
           "url": "https://www.prospectsf.com/private-events/",
           "notes": "Built per event; no published rate card."
         }
       ],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm with the events team." },
-        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm with the events team." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm with the events team."
+        },
+        {
+          "option": "gluten_free",
+          "dedicated": false,
+          "notes": "Not published; confirm with the events team."
+        }
       ],
       "evidence": [
         {
@@ -117,14 +149,22 @@
       "neighborhood": "Financial District",
       "lat": 37.791543,
       "lon": -122.401163,
-      "cuisines": ["American", "Californian"],
+      "cuisines": [
+        "American",
+        "Californian"
+      ],
       "priceTier": 4,
       "website": "https://www.wayfaretavern.com/",
       "eventsUrl": "https://www.wayfaretavern.com/private-events",
       "phone": "+1 415-772-9060",
       "eventsEmail": "contact@wayfaretavern.com",
       "summary": "Tyler Florence's Financial District tavern, spread over three floors. Five bookable spaces, including two fully private rooms that each take fifty seated.",
-      "eventStyles": ["seated_dinner", "reception", "happy_hour", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "reception",
+        "happy_hour",
+        "meeting"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -132,7 +172,9 @@
           "kind": "private_room",
           "seatedCapacity": 50,
           "standingCapacity": 65,
-          "features": ["Fully private"],
+          "features": [
+            "Fully private"
+          ],
           "notes": "Positioned by the venue for corporate dinners.",
           "combinableWith": []
         },
@@ -141,7 +183,9 @@
           "kind": "private_room",
           "seatedCapacity": 50,
           "standingCapacity": 65,
-          "features": ["Fully private"],
+          "features": [
+            "Fully private"
+          ],
           "combinableWith": []
         },
         {
@@ -149,21 +193,34 @@
           "kind": "semi_private",
           "seatedCapacity": 18,
           "standingCapacity": 65,
-          "features": ["Large bar", "Reception friendly"],
+          "features": [
+            "Large bar",
+            "Reception friendly"
+          ],
           "combinableWith": []
         },
         {
           "name": "Cellar Dining Room",
           "kind": "semi_private",
           "seatedCapacity": 18,
-          "features": ["Wine cellar setting"],
+          "features": [
+            "Wine cellar setting"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
-        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        },
+        {
+          "option": "gluten_free",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -229,14 +286,21 @@
       "neighborhood": "Embarcadero",
       "lat": 37.791345,
       "lon": -122.390698,
-      "cuisines": ["New American", "Californian"],
+      "cuisines": [
+        "New American",
+        "Californian"
+      ],
       "priceTier": 4,
       "website": "https://www.boulevardrestaurant.com/",
       "eventsUrl": "https://www.boulevardrestaurant.com/private-events1/",
       "phone": "+1 415-543-6084",
       "eventsEmail": null,
       "summary": "Nancy Oakes' belle-époque room under the Bay Bridge approach. L'Avenue divides into three fourteen-seat salons, which is genuinely useful for a breakout-then-dinner agenda.",
-      "eventStyles": ["seated_dinner", "reception", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "reception",
+        "meeting"
+      ],
       "acceptsBuyout": false,
       "spaces": [
         {
@@ -244,7 +308,10 @@
           "kind": "private_room",
           "seatedCapacity": 52,
           "standingCapacity": 70,
-          "features": ["Divides into three salons", "Fully private"],
+          "features": [
+            "Divides into three salons",
+            "Fully private"
+          ],
           "notes": "Each of the three sub-rooms takes up to 14 seated.",
           "combinableWith": []
         },
@@ -252,13 +319,20 @@
           "name": "The Wine Vault",
           "kind": "semi_private",
           "seatedCapacity": 12,
-          "features": ["Single long table", "Semi-private"],
+          "features": [
+            "Single long table",
+            "Semi-private"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -298,22 +372,34 @@
       "neighborhood": "Embarcadero",
       "lat": 37.790626,
       "lon": -122.388558,
-      "cuisines": ["Steakhouse", "Californian"],
+      "cuisines": [
+        "Steakhouse",
+        "Californian"
+      ],
       "priceTier": 4,
       "website": "https://www.epicsteak.com/",
       "eventsUrl": "https://doc.epicsteak.com/pdf/EpicRoasthouse_PrivateDining.pdf",
       "phone": "+1 415-369-9955",
       "eventsEmail": null,
       "summary": "Waterfront steakhouse under the Bay Bridge, next door to Waterbar and available as a combined buyout with it. The Piazza has retractable walls, so it scales from fifty seated to a hundred and seventy-five.",
-      "eventStyles": ["seated_dinner", "reception", "happy_hour"],
+      "eventStyles": [
+        "seated_dinner",
+        "reception",
+        "happy_hour"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
           "name": "Upstairs Dining Room",
           "kind": "private_room",
           "seatedCapacity": 60,
-          "features": ["Bay views", "Fully private"],
-          "combinableWith": ["The Enclosed Bayside Piazza"]
+          "features": [
+            "Bay views",
+            "Fully private"
+          ],
+          "combinableWith": [
+            "The Enclosed Bayside Piazza"
+          ]
         },
         {
           "name": "The Enclosed Bayside Piazza",
@@ -321,24 +407,40 @@
           "seatedCapacity": 50,
           "standingCapacity": 85,
           "squareFeet": 1000,
-          "features": ["Fireplace", "Retractable walls"],
+          "features": [
+            "Fireplace",
+            "Retractable walls"
+          ],
           "notes": "Can be privatised for larger events of up to 175 guests.",
-          "combinableWith": ["Upstairs Dining Room"]
+          "combinableWith": [
+            "Upstairs Dining Room"
+          ]
         },
         {
           "name": "The Quiver Lounge",
           "kind": "semi_private",
           "standingCapacity": 60,
           "squareFeet": 600,
-          "features": ["Event bar", "Wrap-around cocktail balcony"],
+          "features": [
+            "Event bar",
+            "Wrap-around cocktail balcony"
+          ],
           "notes": "Capacity is our estimate, not a published figure — see the trust note.",
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
-        { "option": "shellfish_allergy", "dedicated": false, "notes": "Seafood-heavy menu — flag early." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        },
+        {
+          "option": "shellfish_allergy",
+          "dedicated": false,
+          "notes": "Seafood-heavy menu — flag early."
+        }
       ],
       "evidence": [
         {
@@ -387,29 +489,47 @@
       "neighborhood": "Embarcadero",
       "lat": 37.790152,
       "lon": -122.388014,
-      "cuisines": ["Seafood", "Californian"],
+      "cuisines": [
+        "Seafood",
+        "Californian"
+      ],
       "priceTier": 4,
       "website": "https://www.waterbarsf.com/",
       "eventsUrl": "https://media-cdn.getbento.com/accounts/57c286fa6cfbd8712bc882c30a596d49/media/kZJ7Pu0SQtCaX44Wvgab_Waterbar_PDG_081524-merged.pdf",
       "phone": "+1 415-284-9922",
       "eventsEmail": null,
       "summary": "Seafood room on the water with two aquarium columns in the middle of it. Indoor and outdoor spaces together take receptions of up to four hundred, and it can be bought out jointly with EPIC Steak next door.",
-      "eventStyles": ["reception", "seated_dinner", "happy_hour"],
+      "eventStyles": [
+        "reception",
+        "seated_dinner",
+        "happy_hour"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
           "name": "Combined indoor and outdoor spaces",
           "kind": "full_buyout",
           "standingCapacity": 400,
-          "features": ["Waterfront terrace", "Bay Bridge views"],
+          "features": [
+            "Waterfront terrace",
+            "Bay Bridge views"
+          ],
           "notes": "Joint buyout with EPIC Steak next door is also available.",
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "shellfish_allergy", "dedicated": false, "notes": "Shellfish-led menu — flag early." },
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "shellfish_allergy",
+          "dedicated": false,
+          "notes": "Shellfish-led menu — flag early."
+        },
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -441,14 +561,22 @@
       "neighborhood": "Rincon Hill",
       "lat": 37.792448,
       "lon": -122.392468,
-      "cuisines": ["Chinese", "Dim sum"],
+      "cuisines": [
+        "Chinese",
+        "Dim sum"
+      ],
       "priceTier": 3,
       "website": "https://yanksing.com/",
       "eventsUrl": "https://yanksing.com/locations/",
       "phone": "+1 415-957-9300",
       "eventsEmail": "events@yanksing.com",
       "summary": "Cart-service dim sum three minutes from Salesforce Tower, with a banquet operation that can spill into the Rincon Center atrium. The format handles mixed dietary requirements better than most.",
-      "eventStyles": ["seated_dinner", "buffet", "reception", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "buffet",
+        "reception",
+        "meeting"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -456,16 +584,26 @@
           "kind": "full_buyout",
           "standingCapacity": 200,
           "seatedCapacity": 150,
-          "features": ["Cart service", "Private banquet menus"],
-          "combinableWith": ["Rincon Center atrium"]
+          "features": [
+            "Cart service",
+            "Private banquet menus"
+          ],
+          "combinableWith": [
+            "Rincon Center atrium"
+          ]
         },
         {
           "name": "Rincon Center atrium",
           "kind": "outdoor",
           "standingCapacity": 800,
-          "features": ["Atrium", "Rain column"],
+          "features": [
+            "Atrium",
+            "Rain column"
+          ],
           "notes": "Used together with the restaurant for events above 200.",
-          "combinableWith": ["Restaurant reception"]
+          "combinableWith": [
+            "Restaurant reception"
+          ]
         }
       ],
       "menus": [
@@ -473,14 +611,27 @@
           "name": "Banquet menu",
           "format": "family_style",
           "pricePerPersonCents": null,
-          "courses": ["Dim sum", "Mains", "Noodles", "Dessert"],
+          "courses": [
+            "Dim sum",
+            "Mains",
+            "Noodles",
+            "Dessert"
+          ],
           "url": "https://yanksing.com/",
           "notes": "Quoted per event by the banquet team."
         }
       ],
       "dietary": [
-        { "option": "vegetarian", "dedicated": true, "notes": "Vegetarian dim sum is a standing part of the menu." },
-        { "option": "shellfish_allergy", "dedicated": false, "notes": "Shellfish is used widely — flag early." }
+        {
+          "option": "vegetarian",
+          "dedicated": true,
+          "notes": "Vegetarian dim sum is a standing part of the menu."
+        },
+        {
+          "option": "shellfish_allergy",
+          "dedicated": false,
+          "notes": "Shellfish is used widely — flag early."
+        }
       ],
       "evidence": [
         {
@@ -531,28 +682,40 @@
       "neighborhood": "South Beach",
       "lat": 37.785251,
       "lon": -122.399364,
-      "cuisines": ["Brazilian", "Steakhouse"],
+      "cuisines": [
+        "Brazilian",
+        "Steakhouse"
+      ],
       "priceTier": 3,
       "website": "https://fogodechao.com/location/san-francisco/",
       "eventsUrl": "https://thevendry.com/venue/117705/fogo-de-chao-brazilian-steakhouse-san-francisco-san-francisco-ca",
       "phone": "+1 415-834-3900",
       "eventsEmail": null,
       "summary": "Churrascaria near Yerba Buena with two private rooms that combine. The all-you-can-eat format removes menu negotiation entirely, which is worth something when the brief is thirty people next Thursday.",
-      "eventStyles": ["seated_dinner", "buffet", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "buffet",
+        "meeting"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
           "name": "Private Room Combination",
           "kind": "private_room",
           "seatedCapacity": 60,
-          "features": ["Fully private", "Divisible"],
+          "features": [
+            "Fully private",
+            "Divisible"
+          ],
           "combinableWith": []
         },
         {
           "name": "Semi-Private Room",
           "kind": "semi_private",
           "seatedCapacity": 30,
-          "features": ["Semi-private"],
+          "features": [
+            "Semi-private"
+          ],
           "combinableWith": []
         }
       ],
@@ -561,14 +724,27 @@
           "name": "Full churrasco experience",
           "format": "buffet",
           "pricePerPersonCents": null,
-          "courses": ["Market table", "Fire-roasted meats", "Sides", "Dessert"],
+          "courses": [
+            "Market table",
+            "Fire-roasted meats",
+            "Sides",
+            "Dessert"
+          ],
           "url": "https://fogodechao.com/location/san-francisco/",
           "notes": "Fixed-format service; group pricing quoted per event."
         }
       ],
       "dietary": [
-        { "option": "gluten_free", "dedicated": false, "notes": "Meat-and-market-table format is broadly gluten-free; confirm sides." },
-        { "option": "vegetarian", "dedicated": true, "notes": "Market table is a substantial vegetarian option in its own right." }
+        {
+          "option": "gluten_free",
+          "dedicated": false,
+          "notes": "Meat-and-market-table format is broadly gluten-free; confirm sides."
+        },
+        {
+          "option": "vegetarian",
+          "dedicated": true,
+          "notes": "Market table is a substantial vegetarian option in its own right."
+        }
       ],
       "evidence": [
         {
@@ -608,14 +784,21 @@
       "neighborhood": "Embarcadero",
       "lat": 37.795934,
       "lon": -122.393641,
-      "cuisines": ["Peruvian", "Seafood"],
+      "cuisines": [
+        "Peruvian",
+        "Seafood"
+      ],
       "priceTier": 3,
       "website": "https://lamarsf.com/",
       "eventsUrl": null,
       "phone": "+1 415-397-8880",
       "eventsEmail": null,
       "summary": "Pier-side Peruvian with a waterfront patio that takes a hundred seated. The range of bookable spaces runs from a twelve-top to a five-hundred-person buyout.",
-      "eventStyles": ["reception", "seated_dinner", "happy_hour"],
+      "eventStyles": [
+        "reception",
+        "seated_dinner",
+        "happy_hour"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -623,22 +806,39 @@
           "kind": "outdoor",
           "seatedCapacity": 100,
           "standingCapacity": 150,
-          "features": ["Bay views", "Outdoor"],
-          "combinableWith": ["Lobby Bar"]
+          "features": [
+            "Bay views",
+            "Outdoor"
+          ],
+          "combinableWith": [
+            "Lobby Bar"
+          ]
         },
         {
           "name": "Lobby Bar",
           "kind": "semi_private",
           "standingCapacity": 30,
-          "features": ["Pisco bar"],
+          "features": [
+            "Pisco bar"
+          ],
           "notes": "Listed for cocktail hours of 20 to 30.",
-          "combinableWith": ["Waterfront patio"]
+          "combinableWith": [
+            "Waterfront patio"
+          ]
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "shellfish_allergy", "dedicated": false, "notes": "Cebiche-led menu — flag early." },
-        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "shellfish_allergy",
+          "dedicated": false,
+          "notes": "Cebiche-led menu — flag early."
+        },
+        {
+          "option": "gluten_free",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -678,14 +878,21 @@
       "neighborhood": "SoMa",
       "lat": 37.785252,
       "lon": -122.397145,
-      "cuisines": ["Californian", "Mediterranean"],
+      "cuisines": [
+        "Californian",
+        "Mediterranean"
+      ],
       "priceTier": 3,
       "website": "https://www.flytrapsf.com/",
       "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
       "phone": "+1 415-243-0580",
       "eventsEmail": null,
       "summary": "SoMa restaurant with a long history and an unusually transparent price structure — hourly for the communal tables, a day rate for the full buyout.",
-      "eventStyles": ["seated_dinner", "happy_hour", "meeting"],
+      "eventStyles": [
+        "seated_dinner",
+        "happy_hour",
+        "meeting"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -693,7 +900,9 @@
           "kind": "semi_private",
           "seatedCapacity": 20,
           "standingCapacity": 35,
-          "features": ["Communal seating"],
+          "features": [
+            "Communal seating"
+          ],
           "combinableWith": []
         },
         {
@@ -701,13 +910,19 @@
           "kind": "full_buyout",
           "seatedCapacity": 70,
           "minSpendCents": 1500000,
-          "features": ["Whole venue"],
+          "features": [
+            "Whole venue"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -756,14 +971,21 @@
       "neighborhood": "Yerba Buena",
       "lat": 37.784725,
       "lon": -122.401218,
-      "cuisines": ["Pizza", "American"],
+      "cuisines": [
+        "Pizza",
+        "American"
+      ],
       "priceTier": 2,
       "website": "https://www.joyridepizza.com/",
       "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
       "phone": null,
       "eventsEmail": null,
       "summary": "Casual pizza operation on Yerba Buena Gardens with an indoor restaurant and a large patio. The cheapest published minimum in the SoMa set, and the patio holds a hundred standing.",
-      "eventStyles": ["happy_hour", "reception", "buffet"],
+      "eventStyles": [
+        "happy_hour",
+        "reception",
+        "buffet"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -771,8 +993,12 @@
           "kind": "private_room",
           "seatedCapacity": 85,
           "minSpendCents": 1000000,
-          "features": ["Indoor"],
-          "combinableWith": ["Outdoor Patio"]
+          "features": [
+            "Indoor"
+          ],
+          "combinableWith": [
+            "Outdoor Patio"
+          ]
         },
         {
           "name": "Outdoor Patio",
@@ -780,14 +1006,27 @@
           "seatedCapacity": 40,
           "standingCapacity": 100,
           "minSpendCents": 300000,
-          "features": ["Outdoor", "Garden-facing"],
-          "combinableWith": ["Indoor restaurant"]
+          "features": [
+            "Outdoor",
+            "Garden-facing"
+          ],
+          "combinableWith": [
+            "Indoor restaurant"
+          ]
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": true, "notes": "Pizza format supports vegetarian by default." },
-        { "option": "gluten_free", "dedicated": false, "notes": "Not published; confirm crust options." }
+        {
+          "option": "vegetarian",
+          "dedicated": true,
+          "notes": "Pizza format supports vegetarian by default."
+        },
+        {
+          "option": "gluten_free",
+          "dedicated": false,
+          "notes": "Not published; confirm crust options."
+        }
       ],
       "evidence": [
         {
@@ -836,14 +1075,22 @@
       "neighborhood": "Mission Bay",
       "lat": 37.779391,
       "lon": -122.392625,
-      "cuisines": ["Nikkei", "Japanese", "Peruvian"],
+      "cuisines": [
+        "Nikkei",
+        "Japanese",
+        "Peruvian"
+      ],
       "priceTier": 3,
       "website": "https://www.kaiyosf.com/",
       "eventsUrl": null,
       "phone": "+1 415-534-9004",
       "eventsEmail": null,
       "summary": "Nikkei rooftop on the twelfth floor of the Hyatt Place in SoMa, with semi-private lounges and a range that runs from fourteen to two hundred and fifty.",
-      "eventStyles": ["reception", "happy_hour", "seated_dinner"],
+      "eventStyles": [
+        "reception",
+        "happy_hour",
+        "seated_dinner"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -851,21 +1098,35 @@
           "kind": "rooftop",
           "standingCapacity": 250,
           "seatedCapacity": 120,
-          "features": ["Rooftop", "Semi-private lounges", "City views"],
+          "features": [
+            "Rooftop",
+            "Semi-private lounges",
+            "City views"
+          ],
           "combinableWith": []
         },
         {
           "name": "Private dining room",
           "kind": "private_room",
           "seatedCapacity": 12,
-          "features": ["Fully private"],
+          "features": [
+            "Fully private"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." },
-        { "option": "shellfish_allergy", "dedicated": false, "notes": "Nikkei menu is seafood-led — flag early." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        },
+        {
+          "option": "shellfish_allergy",
+          "dedicated": false,
+          "notes": "Nikkei menu is seafood-led — flag early."
+        }
       ],
       "evidence": [
         {
@@ -905,14 +1166,20 @@
       "neighborhood": "Jackson Square",
       "lat": 37.795236,
       "lon": -122.400963,
-      "cuisines": ["French", "Wine bar"],
+      "cuisines": [
+        "French",
+        "Wine bar"
+      ],
       "priceTier": 3,
       "website": "https://www.verjussf.com/",
       "eventsUrl": null,
       "phone": "+1 415-944-4600",
       "eventsEmail": null,
       "summary": "Wine bar and cave in Jackson Square. Better suited to a standing reception than a seated dinner — the seated ceiling is forty against a hundred standing.",
-      "eventStyles": ["reception", "happy_hour"],
+      "eventStyles": [
+        "reception",
+        "happy_hour"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -920,13 +1187,20 @@
           "kind": "full_buyout",
           "seatedCapacity": 40,
           "standingCapacity": 100,
-          "features": ["Wine cave", "Full bar"],
+          "features": [
+            "Wine cave",
+            "Full bar"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -957,14 +1231,18 @@
       "neighborhood": "Jackson Square",
       "lat": 37.797365,
       "lon": -122.403119,
-      "cuisines": ["Italian"],
+      "cuisines": [
+        "Italian"
+      ],
       "priceTier": 3,
       "website": "https://cotognasf.com/",
       "eventsUrl": null,
       "phone": "+1 415-775-8508",
       "eventsEmail": null,
       "summary": "Michael Tusk's Italian room in Jackson Square. Small private capacity — a leadership dinner rather than a team event, and at the edge of a fifteen-minute walk from the Transbay district.",
-      "eventStyles": ["seated_dinner"],
+      "eventStyles": [
+        "seated_dinner"
+      ],
       "acceptsBuyout": false,
       "spaces": [
         {
@@ -972,13 +1250,19 @@
           "kind": "private_room",
           "seatedCapacity": 25,
           "minGuests": 6,
-          "features": ["Indoor and outdoor areas"],
+          "features": [
+            "Indoor and outdoor areas"
+          ],
           "combinableWith": []
         }
       ],
       "menus": [],
       "dietary": [
-        { "option": "vegetarian", "dedicated": false, "notes": "Not published; confirm." }
+        {
+          "option": "vegetarian",
+          "dedicated": false,
+          "notes": "Not published; confirm."
+        }
       ],
       "evidence": [
         {
@@ -1009,14 +1293,21 @@
       "neighborhood": "Yerba Buena",
       "lat": 37.784605,
       "lon": -122.404505,
-      "cuisines": ["American", "Diner"],
+      "cuisines": [
+        "American",
+        "Diner"
+      ],
       "priceTier": 1,
       "website": "https://melsdrive-in.com/",
       "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
       "phone": null,
       "eventsEmail": null,
       "summary": "Fifties diner that takes the whole space for two hundred seated. Unusual for its price point in publishing a minimum at all.",
-      "eventStyles": ["buffet", "reception", "happy_hour"],
+      "eventStyles": [
+        "buffet",
+        "reception",
+        "happy_hour"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -1024,7 +1315,10 @@
           "kind": "full_buyout",
           "seatedCapacity": 200,
           "minSpendCents": 500000,
-          "features": ["Whole venue", "Diner counter"],
+          "features": [
+            "Whole venue",
+            "Diner counter"
+          ],
           "combinableWith": []
         }
       ],
@@ -1062,14 +1356,20 @@
       "neighborhood": "SoMa",
       "lat": 37.772811,
       "lon": -122.408463,
-      "cuisines": ["American", "Bar food"],
+      "cuisines": [
+        "American",
+        "Bar food"
+      ],
       "priceTier": 2,
       "website": "https://www.marsbarsf.com/",
       "eventsUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
       "phone": "+1 415-621-6277",
       "eventsEmail": null,
       "summary": "Bar and patio in the western end of SoMa. Two hundred standing for a reasonable minimum, but far enough out that it fails a fifteen-minute walking brief from the Transbay district.",
-      "eventStyles": ["happy_hour", "reception"],
+      "eventStyles": [
+        "happy_hour",
+        "reception"
+      ],
       "acceptsBuyout": true,
       "spaces": [
         {
@@ -1078,16 +1378,25 @@
           "seatedCapacity": 75,
           "standingCapacity": 200,
           "minSpendCents": 250000,
-          "features": ["Full bar", "Patio"],
-          "combinableWith": ["Outdoor Patio"]
+          "features": [
+            "Full bar",
+            "Patio"
+          ],
+          "combinableWith": [
+            "Outdoor Patio"
+          ]
         },
         {
           "name": "Outdoor Patio",
           "kind": "outdoor",
           "seatedCapacity": 26,
           "minSpendCents": 120000,
-          "features": ["Outdoor"],
-          "combinableWith": ["Entire Venue"]
+          "features": [
+            "Outdoor"
+          ],
+          "combinableWith": [
+            "Entire Venue"
+          ]
         }
       ],
       "menus": [],
@@ -1109,6 +1418,15 @@
           "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
           "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
           "snippet": "$2,500 minimum spend per session.",
+          "observedAt": "2026-08-10"
+        },
+        {
+          "field": "space.capacity",
+          "space": "Outdoor Patio",
+          "sourceKind": "booking_platform",
+          "sourceUrl": "https://www.tagvenue.com/us/hire/private-dining-rooms/san-francisco/south-of-market-soma",
+          "sourceTitle": "Private Dining Rooms in SoMa — Tagvenue",
+          "snippet": "Mars Bar Restaurant, Outdoor Patio: 26 seated, $1,200 minimum spend.",
           "observedAt": "2026-08-10"
         }
       ]
