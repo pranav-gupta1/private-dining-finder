@@ -35,23 +35,51 @@ interface CacheRow {
   created_at: string;
 }
 
+/**
+ * Process-local cache in front of the database one.
+ *
+ * Without Supabase configured there is nowhere to persist routes, and the free
+ * OSRM instances can take the better part of ten seconds to answer a cold
+ * matrix call. Venues do not move, so holding answers in memory for the life of
+ * the process makes a second search against the same origin instant. Bounded so
+ * a long-running server cannot grow without limit.
+ */
+const MEMORY_CACHE_LIMIT = 5000;
+const memoryCache = new Map<string, CacheRow>();
+
+function rememberInProcess(row: CacheRow) {
+  if (memoryCache.size >= MEMORY_CACHE_LIMIT) {
+    const oldest = memoryCache.keys().next().value;
+    if (oldest) memoryCache.delete(oldest);
+  }
+  memoryCache.set(row.cache_key, row);
+}
+
 async function readCache(keys: string[]): Promise<Map<string, CacheRow>> {
+  const local = new Map<string, CacheRow>();
+  for (const key of keys) {
+    const hit = memoryCache.get(key);
+    if (hit) local.set(key, hit);
+  }
+
   const supabase = getServerClient();
-  if (!supabase || keys.length === 0) return new Map();
+  if (!supabase || keys.length === 0) return local;
 
   const { data, error } = await supabase
     .from("commute_cache")
     .select("cache_key, duration_secs, distance_meters, provider, created_at")
     .in("cache_key", keys);
 
-  if (error || !data) return new Map();
+  if (error || !data) return local;
 
   const cutoff = Date.now() - CACHE_TTL_MS;
-  const map = new Map<string, CacheRow>();
   for (const row of data as CacheRow[]) {
-    if (new Date(row.created_at).getTime() >= cutoff) map.set(row.cache_key, row);
+    if (new Date(row.created_at).getTime() >= cutoff) {
+      local.set(row.cache_key, row);
+      rememberInProcess(row);
+    }
   }
-  return map;
+  return local;
 }
 
 async function writeCache(
@@ -153,6 +181,9 @@ export async function travelTimes(
         distance_meters: legs[i]!.distanceMeters,
         provider: providerByIndex[i] ?? "unknown",
       }));
+
+    const now = new Date().toISOString();
+    for (const row of fresh) rememberInProcess({ ...row, created_at: now });
 
     void writeCache(fresh);
   }
