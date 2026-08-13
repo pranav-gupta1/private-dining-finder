@@ -1,14 +1,5 @@
 import { z } from "zod";
 
-/**
- * Shape of the committed venue dataset.
- *
- * The seed files are JSON rather than TypeScript so that the research pipeline
- * in `scripts/research` can write them directly, and so a non-engineer can edit
- * a capacity without touching application code. This schema is the contract
- * between the two: `npm run db:seed` refuses to load anything that fails it.
- */
-
 export const sourceKindSchema = z.enum([
   "venue_site",
   "venue_document",
@@ -21,7 +12,7 @@ export const sourceKindSchema = z.enum([
 
 export const seedEvidenceSchema = z.object({
   field: z.string(),
-  /** Space name this evidence is about, if it is space-specific. */
+
   space: z.string().optional(),
   menu: z.string().optional(),
   sourceKind: sourceKindSchema,
@@ -101,7 +92,7 @@ export const seedVenueSchema = z.object({
 
 export const seedFileSchema = z.object({
   market: z.string(),
-  /** Free text describing how this market's venues were collected. */
+
   methodology: z.string(),
   venues: z.array(seedVenueSchema),
 });

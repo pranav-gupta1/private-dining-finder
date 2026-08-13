@@ -44,7 +44,6 @@ export function ResultCard({
   const { venue, commute, fit, price } = result;
   const ModeIcon = commute.mode === "walking" ? Footprints : Car;
 
-  // Evidence backing the room we are actually recommending.
   const capacityEvidence = venue.evidence.filter(
     (e) => e.field === "space.capacity" && (e.spaceId === null || fit.spaceIds.includes(e.spaceId)),
   );

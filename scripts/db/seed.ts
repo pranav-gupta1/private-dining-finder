@@ -1,14 +1,3 @@
-/**
- * Loads the committed venue datasets into Postgres.
- *
- *   npm run db:seed
- *
- * Idempotent: identifiers are derived from the venue slug and space name, so
- * re-running updates rows in place. Child rows are replaced rather than merged,
- * which keeps the database an exact mirror of the JSON — the JSON is the source
- * of truth, and drifting from it is how a catalogue rots.
- */
-
 import "dotenv/config";
 import { Client } from "pg";
 
@@ -86,7 +75,6 @@ async function main() {
           ],
         );
 
-        // Evidence carries FKs to spaces and menus, so it goes first on delete.
         await client.query("delete from evidence where venue_id = $1", [id]);
         await client.query("delete from venue_spaces where venue_id = $1", [id]);
         await client.query("delete from venue_menus where venue_id = $1", [id]);

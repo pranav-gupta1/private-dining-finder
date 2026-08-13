@@ -87,8 +87,8 @@ describe("fitQuality", () => {
   });
 
   it("scores comfortable headroom at the maximum", () => {
-    expect(fitQuality(60, 50)).toBe(1); // 1.2x
-    expect(fitQuality(75, 50)).toBe(1); // 1.5x
+    expect(fitQuality(60, 50)).toBe(1);
+    expect(fitQuality(75, 50)).toBe(1);
   });
 
   it("penalises an exact fit — there is no room for a bar or AV", () => {
@@ -101,7 +101,6 @@ describe("fitQuality", () => {
   });
 
   it("rises into the ideal band and falls away past it", () => {
-    // 1.05x is tight, 1.2x is ideal, 2x is loose, 4x is cavernous.
     expect(fitQuality(52, 50)).toBeLessThan(fitQuality(60, 50));
     expect(fitQuality(200, 50)).toBeLessThan(fitQuality(100, 50));
     expect(fitQuality(100, 50)).toBeLessThan(fitQuality(60, 50));

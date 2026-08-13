@@ -1,14 +1,3 @@
-/**
- * Runs the three briefs the tool has to handle, straight through the same code
- * path the API uses, and prints the ranked output.
- *
- *   npm run scenarios
- *   npm run scenarios -- --scenario=2 --limit=10
- *
- * Handy for checking a ranking change without clicking through the UI, and for
- * confirming the whole pipeline still works against a cold cache.
- */
-
 import "dotenv/config";
 
 import { runSearch } from "../src/lib/search/search";

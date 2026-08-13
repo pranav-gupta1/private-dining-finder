@@ -1,19 +1,5 @@
 import type { Evidence, SourceKind, TrustLevel } from "@/lib/types";
 
-/**
- * Trust labels.
- *
- * A planner is going to put one of these venues in front of an executive, so
- * "the internet says 60 people fit" is not good enough on its own. Every label
- * answers two questions: who said this, and how long ago.
- *
- *   verified   — the venue itself published it (private-events page, capacity
- *                chart, banquet PDF) or a planner confirmed it by phone.
- *   likely     — a booking platform or reputable directory carries it. Usually
- *                right, occasionally out of date, worth confirming.
- *   unverified — we inferred it, or nobody published it at all. Needs a call.
- */
-
 const BASE_TRUST: Record<SourceKind, TrustLevel> = {
   venue_site: "verified",
   venue_document: "verified",
@@ -24,14 +10,8 @@ const BASE_TRUST: Record<SourceKind, TrustLevel> = {
   inferred: "unverified",
 };
 
-/**
- * Restaurants reconfigure rooms, raise minimums and close. A capacity sourced
- * from the venue two years ago is not the same claim as one sourced last month,
- * so age costs a level. These thresholds are intentionally generous: private
- * dining pages change far more slowly than menus do.
- */
-const STALE_AFTER_DAYS = 550; // ~18 months
-const VERY_STALE_AFTER_DAYS = 1100; // ~3 years
+const STALE_AFTER_DAYS = 550;
+const VERY_STALE_AFTER_DAYS = 1100;
 
 const RANK: Record<TrustLevel, number> = { verified: 3, likely: 2, unverified: 1 };
 const BY_RANK: TrustLevel[] = ["unverified", "unverified", "likely", "verified"];
@@ -56,7 +36,6 @@ function downgrade(level: TrustLevel, steps: number): TrustLevel {
   return BY_RANK[Math.max(1, RANK[level] - steps)];
 }
 
-/** Trust for a single piece of evidence, after applying the staleness penalty. */
 export function trustForEvidence(evidence: Evidence, now = new Date()): TrustLevel {
   const base = BASE_TRUST[evidence.sourceKind];
   const age = daysSince(evidence.observedAt, now);
@@ -73,15 +52,6 @@ export interface FieldTrust {
   supporting: Evidence[];
 }
 
-/**
- * Resolve the trust label for one field.
- *
- * Multiple sources are common — a venue's own page plus a Tripleseat listing.
- * We take the strongest rather than averaging, because a first-party number is
- * not made less true by a directory disagreeing with it. Two independent
- * `likely` sources do promote to `verified`: independent agreement is the whole
- * reason corroboration is worth anything.
- */
 export function resolveFieldTrust(
   evidence: Evidence[],
   field: string,
@@ -148,7 +118,6 @@ function formatAge(days: number): string {
   return `${Math.round(months / 12)} years ago`;
 }
 
-/** Weakest of several labels — used when a recommendation depends on all of them. */
 export function weakest(...levels: TrustLevel[]): TrustLevel {
   if (levels.length === 0) return "unverified";
   return levels.reduce((acc, l) => (RANK[l] < RANK[acc] ? l : acc));

@@ -5,15 +5,10 @@ import { googleTravelProvider } from "./providers/google";
 import { osrmProvider } from "./providers/osrm";
 import type { TravelLeg, TravelProvider } from "./providers/types";
 
-/**
- * Cache keys round coordinates to five decimals (~1 m). Venues never move, and
- * a planner searching the same office twice should not pay for routing twice.
- */
 const coordKey = (p: LatLon) => `${p.lat.toFixed(5)},${p.lon.toFixed(5)}`;
 const cacheKey = (o: LatLon, d: LatLon, mode: TravelMode) =>
   `${mode}:${coordKey(o)}:${coordKey(d)}`;
 
-/** Routes go stale slowly. A month is a reasonable compromise. */
 const CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
 function providers(): TravelProvider[] {
@@ -22,7 +17,7 @@ function providers(): TravelProvider[] {
 
 export interface TravelBatchResult {
   commutes: Commute[];
-  /** Provider that answered for the majority of legs, for the UI to display. */
+
   primaryProvider: string;
   cacheHits: number;
 }
@@ -35,15 +30,6 @@ interface CacheRow {
   created_at: string;
 }
 
-/**
- * Process-local cache in front of the database one.
- *
- * Without Supabase configured there is nowhere to persist routes, and the free
- * OSRM instances can take the better part of ten seconds to answer a cold
- * matrix call. Venues do not move, so holding answers in memory for the life of
- * the process makes a second search against the same origin instant. Bounded so
- * a long-running server cannot grow without limit.
- */
 const MEMORY_CACHE_LIMIT = 5000;
 const memoryCache = new Map<string, CacheRow>();
 
@@ -97,21 +83,10 @@ async function writeCache(
 ): Promise<void> {
   const supabase = getServerClient();
   if (!supabase || !canWriteCaches() || rows.length === 0) return;
-  // Best effort: a cache write failing should never fail a search.
+
   await supabase.from("commute_cache").upsert(rows, { onConflict: "cache_key" });
 }
 
-/**
- * Travel time from one origin to many destinations.
- *
- * Order of preference per destination:
- *   1. cache
- *   2. a real routing provider (Google if keyed, otherwise public OSRM)
- *   3. a straight-line estimate, flagged as such
- *
- * The estimate is what makes this safe to demo: the search always returns, and
- * the UI is honest about which numbers are routed and which are approximated.
- */
 export async function travelTimes(
   origin: LatLon,
   destinations: LatLon[],
@@ -155,7 +130,7 @@ export async function travelTimes(
           if (!leg) return;
           legs[destIndex] = {
             durationSeconds: leg.durationSeconds,
-            // Some matrix APIs return durations without distances.
+
             distanceMeters:
               leg.distanceMeters >= 0
                 ? leg.distanceMeters
@@ -163,9 +138,7 @@ export async function travelTimes(
           };
           providerByIndex[destIndex] = provider.name;
         });
-      } catch {
-        // Fall through to the next provider, then to estimates.
-      }
+      } catch {}
     }
 
     const fresh = missingIndexes
@@ -217,7 +190,6 @@ export async function travelTimes(
   return { commutes, primaryProvider, cacheHits };
 }
 
-/** Convenience wrapper for a single destination. */
 export async function travelTime(
   origin: LatLon,
   destination: LatLon,

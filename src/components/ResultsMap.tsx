@@ -8,15 +8,6 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import type { Origin, RankedVenue, SearchRequest } from "@/lib/types";
 import { prefilterRadiusMeters } from "@/lib/geo/distance";
 
-/**
- * Results map.
- *
- * Uses CARTO's free raster basemap rather than a vector style behind an API
- * key, so the app has no map provider to configure. The shaded circle is the
- * straight-line radius the commute budget implies — it is not an isochrone and
- * is drawn faintly so it reads as orientation, not as a boundary.
- */
-
 const STYLE: maplibregl.StyleSpecification = {
   version: 8,
   sources: {
@@ -41,7 +32,6 @@ const TRUST_COLOUR = {
   unverified: "#a03c3c",
 } as const;
 
-/** Circle drawn as a polygon — MapLibre has no metre-radius circle primitive. */
 function circlePolygon(lat: number, lon: number, radiusMeters: number, steps = 96) {
   const coords: [number, number][] = [];
   const latRadius = radiusMeters / 111_320;
@@ -94,7 +84,6 @@ export function ResultsMap({
     };
   }, []);
 
-  // Origin marker, radius ring and viewport.
   useEffect(() => {
     const instance = map.current;
     if (!instance || !origin) return;
@@ -151,7 +140,6 @@ export function ResultsMap({
     else instance.once("load", draw);
   }, [origin, request.maxCommuteMinutes, request.travelMode, results]);
 
-  // Venue markers.
   useEffect(() => {
     const instance = map.current;
     if (!instance) return;
@@ -194,7 +182,6 @@ export function ResultsMap({
     });
   }, [results, onSelect]);
 
-  // Highlight whichever card is selected.
   useEffect(() => {
     for (const [slug, marker] of markers.current) {
       if (slug === "__origin") continue;

@@ -12,7 +12,6 @@ import { VenueDetail } from "./VenueDetail";
 import { CompareDialog, CompareTray } from "./Compare";
 import { Button, Segmented } from "./ui/primitives";
 
-// MapLibre touches `window` at import time, so it is client-only.
 const ResultsMap = dynamic(() => import("./ResultsMap").then((m) => m.ResultsMap), {
   ssr: false,
   loading: () => <div className="h-full w-full animate-pulse bg-ink-100" />,
@@ -35,7 +34,7 @@ function sortResults(results: RankedVenue[], key: SortKey): RankedVenue[] {
     case "capacity":
       return copy.sort((a, b) => b.fit.capacity - a.fit.capacity);
     case "price":
-      // Venues with no published price sort last: an unknown is not a low price.
+
       return copy.sort((a, b) => {
         const av = a.price.perPersonCents ?? Number.POSITIVE_INFINITY;
         const bv = b.price.perPersonCents ?? Number.POSITIVE_INFINITY;
@@ -78,7 +77,6 @@ export function PlannerApp({ catalogue }: { catalogue: { venues: number; spaces:
       });
       const body = await res.json();
 
-      // Ignore anything that came back after a newer search was fired.
       if (id !== requestId.current) return;
 
       if (!res.ok) {
@@ -98,8 +96,6 @@ export function PlannerApp({ catalogue }: { catalogue: { venues: number; spaces:
     }
   }, []);
 
-  // Run the first scenario on load so the tool opens with something in it,
-  // deferred a frame so the shell and skeletons paint before the request goes out.
   useEffect(() => {
     const frame = requestAnimationFrame(() => void search(PRESETS[0].request));
     return () => cancelAnimationFrame(frame);

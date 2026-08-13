@@ -4,7 +4,7 @@ import { ZodError } from "zod";
 import { runSearch, searchRequestSchema } from "@/lib/search/search";
 
 export const runtime = "nodejs";
-// Searches write to the commute cache, so they must not be statically rendered.
+
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
     }
 
     const message = error instanceof Error ? error.message : "Search failed";
-    // A failed geocode is the planner's problem to fix, not a server fault.
+
     const status = message.toLowerCase().includes("could not find") ? 404 : 500;
     return NextResponse.json({ error: message }, { status });
   }

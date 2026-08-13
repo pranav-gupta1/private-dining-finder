@@ -1,23 +1,3 @@
-/**
- * Turns a venue's private-events page into a structured draft record.
- *
- *   npm run research:extract -- --url=https://example.com/private-events --slug=example
- *   npm run research:extract -- --all          # everything in sources.json
- *
- * This is the part of the project that is genuinely tedious by hand: every
- * venue publishes its capacities in a different shape — a table, a paragraph, a
- * PDF, a list of room names with numbers buried in prose — and there are a few
- * hundred of them per market. An LLM is good at reading that and bad at being
- * trusted with it, so the prompt is built around one rule: extract only what
- * the page literally says, and attach the sentence you took it from.
- *
- * Output is a draft, not a commit. It lands in scripts/research/out/ for a
- * human to check against the snippets before anything reaches src/data.
- *
- * The app itself never calls this. The dataset it produces is committed, so
- * running the search costs nothing and returns the same results every time.
- */
-
 import "dotenv/config";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -28,11 +8,6 @@ import { z } from "zod";
 const OUT_DIR = path.join(process.cwd(), "scripts", "research", "out");
 const CACHE_DIR = path.join(process.cwd(), "scripts", "research", "pages");
 
-/**
- * Deliberately narrower than the seed schema. The model is asked for facts, not
- * for editorial fields like `summary` or `eventStyles` — those are judgement
- * calls a person should make.
- */
 const extractionSchema = z.object({
   venueName: z.string().describe("The venue's name exactly as it appears on the page."),
   addressLine1: z
@@ -74,11 +49,6 @@ const extractionSchema = z.object({
           .nullable()
           .describe("Minimum food and beverage spend in cents, e.g. $10,000 becomes 1000000."),
         perPersonCents: z.number().int().nullable(),
-        /**
-         * The whole point of the exercise. A capacity without the sentence it
-         * came from cannot be checked, and an unverifiable number is worse than
-         * no number because it looks like data.
-         */
         sourceSnippet: z
           .string()
           .describe("Verbatim sentence or table row from the page stating these figures."),
@@ -96,7 +66,7 @@ const extractionSchema = z.object({
   dietaryMentions: z
     .array(z.string())
     .describe("Verbatim phrases about dietary accommodation. Empty if the page says nothing."),
-  /** Anything the model noticed that a reviewer should look at before merging. */
+
   reviewNotes: z.array(z.string()),
 });
 
@@ -135,14 +105,10 @@ function stripHtml(html: string): string {
 }
 
 async function loadPage(url: string, slug: string): Promise<string> {
-  // A cached copy keeps re-runs free and means a page that later goes behind a
-  // bot wall is still reproducible.
   const cachePath = path.join(CACHE_DIR, `${slug}.html`);
   try {
     return await readFile(cachePath, "utf8");
-  } catch {
-    // Not cached yet.
-  }
+  } catch {}
 
   const response = await fetch(url, {
     headers: { "User-Agent": "private-dining-finder research (contact: see repo README)" },
@@ -163,8 +129,6 @@ async function extractOne(client: Anthropic, source: { slug: string; url: string
     model: "claude-opus-5",
     max_tokens: 16000,
     system: SYSTEM,
-    // Extraction is a reading task, not a reasoning one — low effort keeps the
-    // pipeline cheap enough to run across a whole market.
     output_config: { effort: "low", format: zodOutputFormat(extractionSchema) },
     messages: [
       {

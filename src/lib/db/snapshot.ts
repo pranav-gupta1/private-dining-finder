@@ -6,15 +6,6 @@ import manhattan from "@/data/venues/manhattan.json";
 import sanFrancisco from "@/data/venues/san-francisco.json";
 import waikiki from "@/data/venues/waikiki.json";
 
-/**
- * The committed venue catalogue, in memory.
- *
- * This is the same data `npm run db:seed` pushes to Postgres, loaded straight
- * from the JSON so the app is runnable the moment the repo is cloned. When
- * Supabase is configured the query layer prefers the database; this stays as
- * the fallback and as the source of truth for the seed.
- */
-
 const FILES: unknown[] = [manhattan, sanFrancisco, waikiki];
 
 let cache: Venue[] | null = null;

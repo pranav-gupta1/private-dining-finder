@@ -12,15 +12,6 @@ import { formatDuration } from "@/lib/geo/distance";
 import { bestCapacityFit } from "./capacity";
 import { budgetFit, formatMoney, priceSignal } from "./price";
 
-/**
- * Weights for the overall fit score.
- *
- * These encode a point of view about what a corporate planner is actually
- * optimising for. Capacity leads because a room that does not fit the group is
- * not a candidate at all. Trust is weighted third — above price — because the
- * expensive failure mode in this workflow is not overpaying, it is putting a
- * venue in a deck and finding out on the call that the room was never that big.
- */
 export const WEIGHTS: Record<ScoreComponent["key"], number> = {
   capacity: 0.28,
   commute: 0.22,
@@ -37,24 +28,17 @@ const TRUST_SCORE: Record<TrustLevel, number> = {
   unverified: 0.3,
 };
 
-/** Venues just past the limit are still shown, flagged, up to this multiple. */
 export const STRETCH_MULTIPLIER = 1.3;
 
-/**
- * Closeness matters more than the raw numbers suggest: 4 minutes versus 16 is
- * the difference between people wandering over and needing a shepherd. The
- * curve stays flat early and falls away as the budget is used up.
- */
 function commuteScore(minutes: number, budgetMinutes: number): number {
   if (budgetMinutes <= 0) return 0;
   const ratio = minutes / budgetMinutes;
   if (ratio <= 0) return 1;
   if (ratio <= 1) return 1 - 0.65 * ratio ** 1.6;
-  // Beyond the budget, decay hard but not to zero — these are stretch options.
+
   return Math.max(0, 0.35 - (ratio - 1) * 0.9);
 }
 
-/** Reception-friendly spaces earn credit even if the venue never says so. */
 const STYLE_FRIENDLY_KINDS: Record<EventStyle, string[]> = {
   reception: ["ballroom", "outdoor", "rooftop", "full_buyout"],
   happy_hour: ["rooftop", "outdoor", "semi_private", "full_buyout"],
@@ -72,7 +56,6 @@ function styleScore(venue: Venue, style: EventStyle, usedSpaceIds: string[]): nu
   const friendly = STYLE_FRIENDLY_KINDS[style] ?? [];
   if (friendly.some((k) => kinds.has(k))) return 0.75;
 
-  // Not advertised for this format, but nothing rules it out either.
   return 0.5;
 }
 
@@ -83,8 +66,6 @@ function dietaryScore(
   const available = new Map(venue.dietary.map((d) => [d.option, d]));
 
   if (requested.length === 0) {
-    // Nothing asked for: reward venues that document accommodation anyway,
-    // since a planner will need it eventually on a 50-person dinner.
     const dedicated = venue.dietary.filter((d) => d.dedicated).length;
     if (dedicated >= 3) return { score: 1, covered: [] };
     if (venue.dietary.length >= 2) return { score: 0.75, covered: [] };
@@ -100,11 +81,6 @@ function dietaryScore(
   return { score: Math.min(1, base * 0.85 + bonus + (covered.length > 0 ? 0.05 : 0)), covered };
 }
 
-/**
- * Contact completeness is a small weight but a real one: a venue with a named
- * events address is one the planner can reach today, and one with neither an
- * email nor a phone number is a research dead end.
- */
 function contactScore(venue: Venue): { score: number; detail: string } {
   const has = {
     email: Boolean(venue.eventsEmail),
@@ -126,10 +102,6 @@ export interface RankOptions {
   now?: Date;
 }
 
-/**
- * Score one venue against a search. Returns null when the venue cannot host the
- * group at all, which the caller uses to drop it from the result set.
- */
 export function rankVenue(
   venue: Venue,
   commute: Commute,
@@ -226,8 +198,6 @@ export function rankVenue(
 }
 
 function capacityComponent(utilisation: number, arrangement: string): number {
-  // fitQuality is expressed in terms of capacity vs headcount; utilisation is
-  // exactly that ratio, so reuse the same curve here.
   const ratio = utilisation;
   let base: number;
   if (ratio < 1) base = 0;

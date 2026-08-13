@@ -3,15 +3,6 @@ import { haversineMeters, type LatLon } from "@/lib/geo/distance";
 import { getServerClient } from "./client";
 import { allVenues, venueBySlug as snapshotVenueBySlug } from "./snapshot";
 
-/**
- * Candidate lookup.
- *
- * Against Postgres this calls `search_candidates`, which does the bounding-box
- * narrowing in the database so we never ship the whole catalogue over the wire.
- * Against the file snapshot it does the same filtering in memory. Both return
- * the same shape, so nothing downstream cares which ran.
- */
-
 export interface CandidateSet {
   venues: Venue[];
   source: "postgres" | "snapshot";
@@ -163,7 +154,6 @@ function fromRow(row: VenueRow): Venue {
   };
 }
 
-/** Largest headcount any single space at the venue could hold, either format. */
 function peakCapacity(venue: Venue): number {
   return venue.spaces.reduce(
     (max, s) => Math.max(max, s.seatedCapacity ?? 0, s.standingCapacity ?? 0),
@@ -205,8 +195,7 @@ export async function findCandidates(
         };
       }
     }
-    // Any database problem falls through to the snapshot rather than failing
-    // the request. The response metadata records which path ran.
+
   }
 
   const all = allVenues();

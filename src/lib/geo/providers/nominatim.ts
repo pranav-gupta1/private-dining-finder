@@ -8,14 +8,6 @@ interface NominatimPlace {
   display_name?: string;
 }
 
-/**
- * Keyless geocoder backed by OpenStreetMap.
- *
- * Nominatim's usage policy asks for an identifying User-Agent and caps callers
- * at roughly one request per second. Both are handled here: the header is built
- * from GEO_CONTACT_EMAIL, and callers go through the cache in geocode.ts so a
- * repeated search never touches the network.
- */
 export const nominatimProvider: GeocodeProvider = {
   name: "nominatim",
 

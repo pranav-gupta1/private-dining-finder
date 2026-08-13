@@ -41,8 +41,6 @@ describe("trustForEvidence", () => {
   });
 
   it("downgrades a first-party source once it is over 18 months old", () => {
-    // A capacity the venue published two years ago is a weaker claim than the
-    // same capacity published last month, even though the source is identical.
     expect(trustForEvidence(evidence("venue_site", "2024-09-01"), NOW)).toBe("likely");
   });
 
@@ -74,7 +72,7 @@ describe("resolveFieldTrust", () => {
       "space.capacity",
       NOW,
     );
-    // A first-party number is not made less true by a directory disagreeing.
+
     expect(result.level).toBe("verified");
     expect(result.best?.sourceKind).toBe("venue_site");
   });
@@ -101,7 +99,7 @@ describe("resolveFieldTrust", () => {
       "space.capacity",
       NOW,
     );
-    // Two pages of the same aggregator are one source, not two.
+
     expect(result.level).toBe("likely");
   });
 

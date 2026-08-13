@@ -7,7 +7,6 @@ import type { DietaryOption, EventStyle, SearchRequest, TravelMode } from "@/lib
 import { cn, titleise } from "@/lib/utils";
 import { Button, Chip, Field, Input, Segmented } from "./ui/primitives";
 
-/** The three briefs from the spec, one click each. */
 export const PRESETS: { id: string; label: string; sub: string; request: SearchRequest }[] = [
   {
     id: "times-square",

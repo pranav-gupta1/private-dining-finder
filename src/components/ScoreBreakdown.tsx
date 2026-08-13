@@ -3,13 +3,6 @@
 import type { RankedVenue } from "@/lib/types";
 import { Meter } from "./ui/primitives";
 
-/**
- * Why this venue ranked where it did.
- *
- * A ranked list a planner cannot interrogate is a list they will not trust, and
- * "best overall fit" is a claim that has to be defensible. Each row shows the
- * component score, what it weighs, and the sentence behind it.
- */
 export function ScoreBreakdown({ result }: { result: RankedVenue }) {
   const sorted = [...result.components].sort(
     (a, b) => b.score * b.weight - a.score * a.weight,

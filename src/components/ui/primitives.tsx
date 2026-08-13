@@ -14,10 +14,6 @@ import {
 
 import { cn } from "@/lib/utils";
 
-// ---------------------------------------------------------------------------
-// Button
-// ---------------------------------------------------------------------------
-
 type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
 type ButtonSize = "sm" | "md";
 
@@ -58,10 +54,6 @@ export function Button({
     />
   );
 }
-
-// ---------------------------------------------------------------------------
-// Form fields
-// ---------------------------------------------------------------------------
 
 export function Field({
   label,
@@ -171,18 +163,9 @@ export function Chip({
   );
 }
 
-// ---------------------------------------------------------------------------
-// Popover
-// ---------------------------------------------------------------------------
-
 const PopoverContext = createContext<{ close: () => void }>({ close: () => {} });
 export const usePopover = () => useContext(PopoverContext);
 
-/**
- * Click-to-open popover. Deliberately not hover-triggered: the trust badges it
- * carries hold source URLs a planner needs to click through to, and hover
- * popovers make that a game of skill.
- */
 export function Popover({
   trigger,
   children,
@@ -236,10 +219,6 @@ export function Popover({
     </div>
   );
 }
-
-// ---------------------------------------------------------------------------
-// Meter
-// ---------------------------------------------------------------------------
 
 export function Meter({ value, className }: { value: number; className?: string }) {
   const pct = Math.max(0, Math.min(1, value)) * 100;

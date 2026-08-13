@@ -1,13 +1,3 @@
-/**
- * Applies the SQL files in supabase/migrations, in filename order.
- *
- *   npm run db:migrate            apply anything not yet applied
- *   npm run db:migrate -- --reset drop the public schema first, then apply all
- *
- * Each file runs inside a transaction and is recorded in `schema_migrations`,
- * so re-running is a no-op. Requires SUPABASE_DB_URL.
- */
-
 import "dotenv/config";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
@@ -29,8 +19,6 @@ async function main() {
   const reset = process.argv.includes("--reset");
   const client = new Client({
     connectionString,
-    // Supabase's pooler terminates unencrypted connections; the certificate is
-    // theirs, not one we pin, so verification is off deliberately.
     ssl: connectionString.includes("localhost") ? undefined : { rejectUnauthorized: false },
   });
 
@@ -67,7 +55,6 @@ async function main() {
         continue;
       }
       if (previous && previous !== checksum) {
-        // Editing an applied migration silently diverges environments, so stop.
         throw new Error(
           `${file} has changed since it was applied. Add a new migration instead, or run with --reset.`,
         );

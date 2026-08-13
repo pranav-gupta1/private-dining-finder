@@ -1,17 +1,5 @@
 import { createHash } from "node:crypto";
 
-/**
- * Deterministic UUIDs derived from stable natural keys (a venue slug, a space
- * name within that venue).
- *
- * The point is that the committed JSON snapshot and the seeded Postgres rows
- * carry the *same* identifiers. A shortlist built while running against the
- * file fallback still resolves after the database is wired up, and re-running
- * the seed updates rows in place instead of duplicating the catalogue.
- *
- * This is RFC 4122 v5 (SHA-1, name-based) with a fixed namespace.
- */
-
 const NAMESPACE = "6f2c0a1e-2f7b-4a1e-9a3c-1f0f3b7d5c21";
 
 function namespaceBytes(): Buffer {
@@ -24,7 +12,6 @@ export function deterministicId(name: string): string {
   hash.update(name, "utf8");
   const bytes = hash.digest();
 
-  // Set version (5) and the RFC 4122 variant bits.
   bytes[6] = (bytes[6] & 0x0f) | 0x50;
   bytes[8] = (bytes[8] & 0x3f) | 0x80;
 

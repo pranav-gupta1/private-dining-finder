@@ -102,7 +102,6 @@ export function CompareTray({
   );
 }
 
-/** Rows are ordered so the make-or-break facts sit at the top of the table. */
 const ROWS: {
   label: string;
   render: (result: RankedVenue, request: SearchRequest) => React.ReactNode;

@@ -6,13 +6,6 @@ import { googleGeocodeProvider } from "./providers/google";
 import { nominatimProvider } from "./providers/nominatim";
 import type { GeocodeProvider } from "./providers/types";
 
-/**
- * Addresses the demo scenarios use, resolved ahead of time.
- *
- * Nominatim is a volunteer-run service with no uptime guarantee, and a live
- * demo that dies because a free geocoder is rate limiting is a bad demo. These
- * three are checked first; everything else goes to the network.
- */
 const PINNED: Record<string, { lat: number; lon: number; displayName: string }> = {
   "times square, new york, ny": {
     lat: 40.757975,
@@ -37,7 +30,6 @@ const normalise = (query: string) =>
 const hash = (query: string) => createHash("sha256").update(normalise(query)).digest("hex").slice(0, 32);
 
 function providers(): GeocodeProvider[] {
-  // Google first when configured, OSM always as the backstop.
   return [googleGeocodeProvider, nominatimProvider].filter((p) => p.isAvailable());
 }
 
@@ -45,7 +37,7 @@ function matchPinned(query: string) {
   const key = normalise(query);
   const direct = PINNED[key];
   if (direct) return direct;
-  // Tolerate a planner typing a little more or less than the canonical string.
+
   const found = Object.entries(PINNED).find(
     ([pinned]) => key.includes(pinned) || pinned.includes(key),
   );

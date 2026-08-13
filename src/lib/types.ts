@@ -1,5 +1,3 @@
-/** Domain types shared by the API, the ranking engine and the UI. */
-
 export type TrustLevel = "verified" | "likely" | "unverified";
 
 export type SpaceKind =
@@ -17,11 +15,6 @@ export type EventStyle =
   | "meeting"
   | "buffet";
 
-/**
- * Only door-to-door modes we can actually measure are offered. Transit would
- * need a GTFS feed or a paid API per metro, and a wrong transit number is worse
- * than no transit number, so it is deliberately absent.
- */
 export type TravelMode = "walking" | "driving";
 
 export type SourceKind =
@@ -44,16 +37,15 @@ export type DietaryOption =
   | "shellfish_allergy";
 
 export interface Evidence {
-  /** Dotted field path, e.g. "space.capacity", "venue.min_spend". */
   field: string;
-  /** Set when the evidence is about one specific space rather than the venue. */
+
   spaceId: string | null;
   menuId: string | null;
   sourceKind: SourceKind;
   sourceUrl: string | null;
   sourceTitle: string | null;
   snippet: string | null;
-  observedAt: string; // ISO date
+  observedAt: string;
 }
 
 export interface VenueSpace {
@@ -118,15 +110,10 @@ export interface Venue {
   evidence: Evidence[];
 }
 
-/** The full formatted address, for display and for copy-to-clipboard. */
 export function formatAddress(venue: Venue): string {
   const parts = [venue.addressLine1, venue.addressLine2, venue.city].filter(Boolean);
   return `${parts.join(", ")}, ${venue.region}${venue.postalCode ? ` ${venue.postalCode}` : ""}`;
 }
-
-// ---------------------------------------------------------------------------
-// Search
-// ---------------------------------------------------------------------------
 
 export interface SearchRequest {
   address: string;
@@ -134,12 +121,12 @@ export interface SearchRequest {
   maxCommuteMinutes: number;
   travelMode: TravelMode;
   style: EventStyle;
-  /** Optional ceiling on per-person spend, in cents. */
+
   budgetPerPersonCents?: number | null;
   dietary?: DietaryOption[];
-  /** Include venues that only work as a full buyout. */
+
   allowBuyout?: boolean;
-  /** Include venues whose capacity is unverified. Defaults to true. */
+
   includeUnverified?: boolean;
 }
 
@@ -157,31 +144,29 @@ export interface Commute {
   durationMinutes: number;
   distanceMeters: number;
   provider: string;
-  /** True when the number is a straight-line estimate rather than a real route. */
+
   estimated: boolean;
 }
 
-/** How a venue's rooms can be arranged to hold the requested headcount. */
 export interface CapacityFit {
-  /** The space (or combination) we recommend. */
   spaceIds: string[];
   label: string;
   arrangement: "single_room" | "combined_rooms" | "full_buyout" | "none";
-  /** Capacity actually available for the requested style. */
+
   capacity: number;
   headcount: number;
-  /** capacity / headcount. 1.0 is an exact fit. */
+
   utilisation: number;
   trust: TrustLevel;
-  /** Human-readable explanation shown on the result card. */
+
   explanation: string;
 }
 
 export interface PriceSignal {
   kind: "min_spend" | "per_person" | "price_tier" | "unknown";
-  /** Cents. Null when we only have a tier. */
+
   amountCents: number | null;
-  /** Derived per-head figure used for budget comparison and sorting. */
+
   perPersonCents: number | null;
   tier: number | null;
   currency: string;
@@ -192,7 +177,7 @@ export interface PriceSignal {
 export interface ScoreComponent {
   key: "capacity" | "commute" | "trust" | "price" | "style" | "dietary" | "contact";
   label: string;
-  /** 0..1 */
+
   score: number;
   weight: number;
   detail: string;
@@ -203,19 +188,15 @@ export interface RankedVenue {
   commute: Commute;
   fit: CapacityFit;
   price: PriceSignal;
-  /** Overall trust label for the recommendation as a whole. */
+
   trust: TrustLevel;
   trustReason: string;
-  /** 0..100 */
+
   score: number;
   components: ScoreComponent[];
-  /**
-   * False for venues just outside the commute budget. They are returned rather
-   * than dropped so the UI can offer them as "stretch" options — a planner who
-   * gets zero results wants to know that two minutes of slack would fix it.
-   */
+
   withinCommute: boolean;
-  /** Short bullets explaining why this ranked where it did. */
+
   highlights: string[];
   warnings: string[];
   dietaryCoverage: { requested: DietaryOption[]; covered: DietaryOption[] };
@@ -229,7 +210,7 @@ export interface SearchResponse {
     candidatesConsidered: number;
     withinCommute: number;
     routedWith: string;
-    /** Radius used for the straight-line prefilter, in metres. */
+
     prefilterRadiusMeters: number;
     elapsedMs: number;
     notes: string[];

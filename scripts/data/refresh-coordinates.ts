@@ -1,16 +1,3 @@
-/**
- * Re-geocodes every seeded address and reports how far the stored coordinate
- * has drifted.
- *
- *   npm run data:coords           report only
- *   npm run data:coords -- --write update the JSON files in place
- *
- * Coordinates are the one field in the dataset that cannot be sanity-checked by
- * eye, and a venue placed a block off changes its commute by a minute or two.
- * Nominatim is rate limited to roughly one request a second, which this
- * respects.
- */
-
 import "dotenv/config";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -22,7 +9,6 @@ import { nominatimProvider } from "../../src/lib/geo/providers/nominatim";
 const FILES = ["manhattan.json", "san-francisco.json", "waikiki.json"];
 const DATA_DIR = path.join(process.cwd(), "src", "data", "venues");
 
-/** Anything past this is a genuine mistake rather than rounding. */
 const DRIFT_ALERT_METERS = 150;
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

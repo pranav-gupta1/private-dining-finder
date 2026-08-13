@@ -6,15 +6,6 @@ import { allVenues, seedFiles } from "@/lib/db/snapshot";
 import { haversineMeters } from "@/lib/geo/distance";
 import { rankVenue, STRETCH_MULTIPLIER } from "@/lib/rank/score";
 
-/**
- * The three briefs from the spec, run end to end without touching the network.
- *
- * Commute times come from the straight-line estimator rather than a routing
- * service, so these assertions are about the pipeline and the dataset rather
- * than about any provider being up. The margins below are wide enough that a
- * real routed number lands inside them too.
- */
-
 const ORIGINS = {
   timesSquare: { lat: 40.757975, lon: -73.985543 },
   salesforceTower: { lat: 37.789661, lon: -122.396742 },
@@ -113,7 +104,6 @@ describe("scenario 2 — 30 people near Salesforce Tower, under a 15 minute walk
   });
 
   it("does not reach as far as the western end of SoMa", () => {
-    // Mars Bar is a real, well-reviewed option — and a 25 minute walk away.
     const marsBar = results.find((r) => r.venue.slug === "mars-bar-sf");
     expect(marsBar?.withinCommute ?? false).toBe(false);
   });
@@ -146,7 +136,6 @@ describe("scenario 3 — 200 people, reception, under a 15 minute walk from Hilt
   });
 
   it("picks a right-sized room rather than the biggest one available", () => {
-    // The Coral Ballroom holds 3,775. Recommending it for 200 would be absurd.
     expect(within[0].fit.label).toBe("Rainbow Suite");
   });
 

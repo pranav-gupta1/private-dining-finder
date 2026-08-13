@@ -7,14 +7,6 @@ import {
   type TravelProvider,
 } from "./types";
 
-/**
- * Optional Google Maps Platform providers.
- *
- * These take priority when GOOGLE_MAPS_API_KEY is set and quietly step aside
- * when it is not, so the repo runs for anyone who clones it without needing a
- * billing account. Nothing else in the codebase knows which provider answered.
- */
-
 const key = () => process.env.GOOGLE_MAPS_API_KEY?.trim() || null;
 
 interface GeocodeResponse {
@@ -66,7 +58,6 @@ interface DistanceMatrixResponse {
   }[];
 }
 
-// Google caps a single Distance Matrix request at 25 destinations.
 const MAX_DESTINATIONS_PER_CALL = 25;
 
 const GOOGLE_MODE: Record<TravelMode, string> = {

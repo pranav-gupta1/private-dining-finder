@@ -1,16 +1,3 @@
--- Candidate selection + row level security.
-
--- ---------------------------------------------------------------------------
--- Candidate prefilter
--- ---------------------------------------------------------------------------
--- Routing calls are the expensive part of a search, so we never issue one for a
--- venue that cannot possibly qualify. This narrows by a straight-line radius
--- derived from the requested commute budget, and by whether the venue has any
--- space large enough to be worth considering.
---
--- `radius_meters` is deliberately generous (the caller pads it) because
--- straight-line distance always under-estimates the real walking route.
-
 create or replace function search_candidates(
   origin_lat double precision,
   origin_lon double precision,
@@ -26,9 +13,6 @@ language sql
 stable
 as $$
   with bbox as (
-    -- 1 degree of latitude is ~111_320 m everywhere; longitude shrinks with
-    -- latitude. Computing the box up front lets Postgres use the (lat, lon)
-    -- index instead of evaluating haversine over the whole table.
     select
       origin_lat - (radius_meters / 111320.0) as min_lat,
       origin_lat + (radius_meters / 111320.0) as max_lat,
@@ -55,13 +39,6 @@ as $$
   order by straight_line_meters asc;
 $$;
 
--- ---------------------------------------------------------------------------
--- Row level security
--- ---------------------------------------------------------------------------
--- The venue catalogue is public reference data, so anon gets read access.
--- Everything that can be written (caches, saved searches, shortlists) is only
--- reachable through server-side route handlers using the service role key.
-
 alter table venues          enable row level security;
 alter table venue_spaces    enable row level security;
 alter table venue_menus     enable row level security;
@@ -83,6 +60,3 @@ create policy "dietary is publicly readable"
   on venue_dietary for select using (true);
 create policy "evidence is publicly readable"
   on evidence for select using (true);
-
--- No policies on the cache and workspace tables: without one, RLS denies
--- everything for anon/authenticated while the service role bypasses it.

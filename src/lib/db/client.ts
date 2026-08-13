@@ -1,18 +1,5 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
-/**
- * Supabase access.
- *
- * Route handlers use the service-role client because searches write to the
- * commute and geocode caches. Nothing in `src/components` imports this file.
- *
- * When the environment is not configured the accessors return null rather than
- * throwing, and the data layer falls back to the committed snapshot in
- * `src/data`. That keeps `git clone && npm run dev` working for a reviewer who
- * has not stood up a Supabase project yet, without pretending the database is
- * optional in production.
- */
-
 let cached: SupabaseClient | null = null;
 
 export function isDatabaseConfigured(): boolean {
@@ -40,7 +27,6 @@ export function getServerClient(): SupabaseClient | null {
   return cached;
 }
 
-/** True when we hold the service role key and may therefore write caches. */
 export function canWriteCaches(): boolean {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
 }

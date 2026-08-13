@@ -1,20 +1,6 @@
 import type { PriceSignal, TrustLevel, Venue, VenueSpace } from "@/lib/types";
 import { resolveFieldTrust } from "@/lib/trust/trust";
 
-/**
- * Price signals, in descending order of usefulness to a planner:
- *
- *   1. a minimum spend on the specific room they would book
- *   2. a published per-person events rate
- *   3. the cheapest group menu the venue publishes
- *   4. the general price tier, which is only a hint
- *
- * Everything is normalised to a per-head figure so results are comparable and
- * sortable. A $10,000 minimum means something very different for 30 people than
- * for 200, and that difference is exactly what a planner is trying to see.
- */
-
-/** Rough per-head dinner spend implied by a $–$$$$ tier, used only as a hint. */
 const TIER_PER_PERSON_CENTS: Record<number, number> = {
   1: 3_000,
   2: 6_500,
@@ -51,7 +37,6 @@ export function priceSignal(
     return resolveFieldTrust(scoped, field, now).level;
   };
 
-  // 1. Room minimum spend. When a fit uses several rooms the minimums add up.
   const withMinimum = spaces.filter((s) => s.minSpendCents != null);
   if (withMinimum.length > 0) {
     const total = withMinimum.reduce((sum, s) => sum + (s.minSpendCents ?? 0), 0);
@@ -66,7 +51,6 @@ export function priceSignal(
     };
   }
 
-  // 2. Published per-person events rate.
   const withPerPerson = spaces.find((s) => s.perPersonCents != null);
   if (withPerPerson?.perPersonCents != null) {
     return {
@@ -80,7 +64,6 @@ export function priceSignal(
     };
   }
 
-  // 3. Cheapest published group menu.
   const menuPrices = venue.menus
     .map((m) => m.pricePerPersonCents)
     .filter((c): c is number => c != null);
@@ -97,7 +80,6 @@ export function priceSignal(
     };
   }
 
-  // 4. Price tier only.
   if (venue.priceTier != null) {
     return {
       kind: "price_tier",
@@ -105,7 +87,7 @@ export function priceSignal(
       perPersonCents: TIER_PER_PERSON_CENTS[venue.priceTier] ?? null,
       tier: venue.priceTier,
       currency: "USD",
-      // A tier is never more than a hint, whatever the source says.
+
       trust: "unverified",
       label: `${TIER_LABEL[venue.priceTier]} · no published minimum`,
     };
@@ -122,17 +104,8 @@ export function priceSignal(
   };
 }
 
-/**
- * How well a price signal matches the planner's budget.
- *
- * Under budget is good but not infinitely good — a venue at a third of the
- * budget is usually a different tier of experience, not a bargain. Over budget
- * decays fast rather than dropping to zero, because a venue 10% over is still
- * worth showing and negotiating.
- */
 export function budgetFit(signal: PriceSignal, budgetPerPersonCents: number | null): number {
   if (budgetPerPersonCents == null) {
-    // With no budget given, reward having any concrete number at all.
     if (signal.kind === "min_spend" || signal.kind === "per_person") return 1;
     if (signal.kind === "price_tier") return 0.6;
     return 0.4;
@@ -142,7 +115,7 @@ export function budgetFit(signal: PriceSignal, budgetPerPersonCents: number | nu
   const ratio = signal.perPersonCents / budgetPerPersonCents;
   if (ratio <= 0.5) return 0.85;
   if (ratio <= 1) return 1;
-  if (ratio <= 1.25) return 1 - (ratio - 1) * 2; // 1.00 -> 0.50
+  if (ratio <= 1.25) return 1 - (ratio - 1) * 2;
   if (ratio <= 2) return Math.max(0.1, 0.5 - (ratio - 1.25) * 0.53);
   return 0.05;
 }

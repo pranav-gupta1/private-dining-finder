@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/*
- * The palette is deliberately narrow. A planner scanning thirty results needs
- * colour to mean one thing — how much you can trust a number — so everything
- * else stays neutral and the three trust colours are the only saturated ink on
- * the page.
- */
 @theme {
   --color-ink-950: #0b0f14;
   --color-ink-900: #131a22;
@@ -43,12 +37,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tabular figures everywhere a number is compared down a column. */
 .tnum {
   font-variant-numeric: tabular-nums;
 }
 
-/* Thin scrollbars in the result and map columns, which both scroll a lot. */
 .scroll-slim {
   scrollbar-width: thin;
   scrollbar-color: var(--color-ink-300) transparent;
@@ -98,7 +90,6 @@ body {
   }
 }
 
-/* MapLibre ships its own stylesheet; these trim it to match the app chrome. */
 .maplibregl-ctrl-attrib {
   font-size: 10px;
   background: rgba(255, 255, 255, 0.82) !important;

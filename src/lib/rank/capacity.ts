@@ -8,11 +8,6 @@ import type {
 } from "@/lib/types";
 import { resolveFieldTrust, weakest } from "@/lib/trust/trust";
 
-/**
- * Which capacity number matters depends on what the planner is running.
- * A room that seats 60 at rounds will comfortably hold 100 for a reception,
- * and a 200-person happy hour ranked on seated covers would find nothing.
- */
 const STYLE_USES_STANDING: Record<EventStyle, boolean> = {
   seated_dinner: false,
   buffet: false,
@@ -21,11 +16,6 @@ const STYLE_USES_STANDING: Record<EventStyle, boolean> = {
   happy_hour: true,
 };
 
-/**
- * Conversion factors used only when a venue publishes one number and not the
- * other. Both directions are conservative, and any capacity derived this way is
- * capped at `likely` so it never presents as a published figure.
- */
 const SEATED_TO_STANDING = 1.4;
 const STANDING_TO_SEATED = 0.6;
 
@@ -35,7 +25,6 @@ export interface UsableCapacity {
   basis: "seated" | "standing";
 }
 
-/** The capacity of a single space for a given event style. */
 export function usableCapacity(space: VenueSpace, style: EventStyle): UsableCapacity | null {
   const wantsStanding = STYLE_USES_STANDING[style];
   const seated = space.seatedCapacity;
@@ -56,22 +45,14 @@ export function usableCapacity(space: VenueSpace, style: EventStyle): UsableCapa
   return null;
 }
 
-/**
- * A room that holds exactly the headcount is a worse recommendation than one
- * with a little slack: you need room for a bar, a screen, servers and the two
- * people who were not on the list. Too much slack is also bad — a 200-cap
- * ballroom for 30 feels empty and you pay for the space regardless.
- *
- * The sweet spot is 1.1x to 1.6x the headcount.
- */
 export function fitQuality(capacity: number, headcount: number): number {
   if (capacity < headcount) return 0;
   const ratio = capacity / headcount;
 
-  if (ratio < 1.1) return 0.72 + ((ratio - 1) / 0.1) * 0.18; // 0.72 -> 0.90, tight
+  if (ratio < 1.1) return 0.72 + ((ratio - 1) / 0.1) * 0.18;
   if (ratio <= 1.6) return 1;
-  if (ratio <= 2.5) return 1 - ((ratio - 1.6) / 0.9) * 0.3; // 1.00 -> 0.70
-  if (ratio <= 4) return 0.7 - ((ratio - 2.5) / 1.5) * 0.3; // 0.70 -> 0.40
+  if (ratio <= 2.5) return 1 - ((ratio - 1.6) / 0.9) * 0.3;
+  if (ratio <= 4) return 0.7 - ((ratio - 2.5) / 1.5) * 0.3;
   return 0.35;
 }
 
@@ -82,11 +63,6 @@ interface Candidate {
   arrangement: CapacityFit["arrangement"];
 }
 
-/**
- * Spaces a venue advertises as combinable form a group; the group's capacity is
- * the sum of its members. Union-find keeps this correct when a chain of rooms
- * only declares its immediate neighbour.
- */
 function combinableGroups(spaces: VenueSpace[]): VenueSpace[][] {
   const byName = new Map(spaces.map((s) => [s.name, s]));
   const parent = new Map<string, string>(spaces.map((s) => [s.name, s.name]));
@@ -142,7 +118,6 @@ function buildCandidates(
   }
 
   for (const group of combinableGroups(venue.spaces)) {
-    // Largest rooms first so we combine as few as possible.
     const sorted = [...group].sort((a, b) => {
       const ca = usableCapacity(a, style)?.value ?? 0;
       const cb = usableCapacity(b, style)?.value ?? 0;
@@ -170,10 +145,6 @@ function buildCandidates(
   return candidates;
 }
 
-/**
- * A combination is only worth recommending if no single room already works;
- * splitting a group across two rooms is a real cost to the event.
- */
 const ARRANGEMENT_PENALTY: Record<CapacityFit["arrangement"], number> = {
   single_room: 0,
   combined_rooms: 0.12,
@@ -194,10 +165,6 @@ function describe(candidate: Candidate, headcount: number, style: EventStyle): s
   return `${names[0]} holds ${candidate.capacity} ${noun} — fits ${headcount}.`;
 }
 
-/**
- * Best way to seat `headcount` at this venue, or an explicit "none" result the
- * caller can filter on.
- */
 export function bestCapacityFit(
   venue: Venue,
   headcount: number,
@@ -243,11 +210,6 @@ export function bestCapacityFit(
   };
 }
 
-/**
- * The trust of a fit is the weakest of the rooms it depends on. Capacity we
- * converted between seated and standing ourselves is capped at `likely`,
- * because the venue never actually published that number.
- */
 function capacityTrust(
   spaces: VenueSpace[],
   evidence: Evidence[],
@@ -256,7 +218,7 @@ function capacityTrust(
 ): TrustLevel {
   const levels = spaces.map((space) => {
     const forSpace = evidence.filter((e) => e.spaceId === space.id && e.field === "space.capacity");
-    // Venue-wide capacity evidence covers a room with none of its own.
+
     const scope = forSpace.length > 0 ? forSpace : evidence.filter((e) => e.spaceId === null);
     return resolveFieldTrust(scope, "space.capacity", now).level;
   });

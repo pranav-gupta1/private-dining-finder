@@ -41,8 +41,7 @@ describe("scoring weights", () => {
   it("weight capacity highest and contactability lowest", () => {
     expect(WEIGHTS.capacity).toBeGreaterThan(WEIGHTS.commute);
     expect(WEIGHTS.commute).toBeGreaterThan(WEIGHTS.trust);
-    // Data confidence outranks price: the expensive mistake in this workflow is
-    // a venue that turns out not to fit, not one that costs 10% more.
+
     expect(WEIGHTS.trust).toBeGreaterThan(WEIGHTS.price);
     expect(WEIGHTS.contact).toBeLessThan(WEIGHTS.dietary);
   });
@@ -93,14 +92,12 @@ describe("rankVenue", () => {
   });
 
   it("warns when the recommended room has a guest minimum above the headcount", () => {
-    // Keens' Lincoln Room is the right size for 38 but will not take fewer than 40.
     const ranked = rankVenue(bySlug("keens-steakhouse"), commute(10), request({ headcount: 38 }))!;
     expect(ranked.fit.label).toBe("Lincoln Room");
     expect(ranked.warnings.some((w) => /40 guest minimum/.test(w))).toBe(true);
   });
 
   it("drops unverified venues when the planner asks it to", () => {
-    // A venue with no capacity evidence at all — exactly what the filter is for.
     const undocumented: Venue = {
       ...bySlug("keens-steakhouse"),
       slug: "undocumented",
@@ -108,7 +105,7 @@ describe("rankVenue", () => {
     };
     expect(rankVenue(undocumented, commute(5), request())).not.toBeNull();
     expect(rankVenue(undocumented, commute(5), request({ includeUnverified: false }))).toBeNull();
-    // The same venue with its real sources survives the filter.
+
     expect(
       rankVenue(bySlug("keens-steakhouse"), commute(5), request({ includeUnverified: false })),
     ).not.toBeNull();
@@ -181,7 +178,7 @@ describe("budgetFit", () => {
     const atBudget = budgetFit(signal(10_000), 10_000);
     const wellUnder = budgetFit(signal(3_000), 10_000);
     expect(atBudget).toBe(1);
-    // A third of the budget usually means a different tier of venue, not a bargain.
+
     expect(wellUnder).toBeLessThan(atBudget);
   });
 

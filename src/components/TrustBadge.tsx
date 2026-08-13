@@ -29,11 +29,6 @@ const SOURCE_LABELS: Record<Evidence["sourceKind"], string> = {
   inferred: "Our estimate",
 };
 
-/**
- * The trust badge is the load-bearing element of the whole result card, so it
- * is never a bare colour. It always says the level in words, and clicking it
- * shows the actual sources with the date each was checked.
- */
 export function TrustBadge({
   level,
   reason,

@@ -6,12 +6,11 @@ with every number traced back to the page it came from.
 
 It does not book anything. It is the step before the call.
 
-<!-- prettier-ignore -->
 | | |
 |---|---|
 | **Stack** | Next.js 16 (App Router) · React 19 · Tailwind v4 · TypeScript · Postgres on Supabase |
-| **Runs without keys** | Yes — OpenStreetMap geocoding and routing, committed venue dataset |
-| **Tests** | `npm test` — 86 tests, no network |
+| **Runs without keys** | Yes. OpenStreetMap geocoding and routing, committed venue dataset |
+| **Tests** | `npm test`, 86 tests, no network |
 
 ---
 
@@ -21,8 +20,8 @@ The hard part of private dining is not finding restaurants. It is that the data 
 
 Capacities live on a private-events page, or a booking-platform listing, or a magazine round-up,
 or nowhere at all. They disagree with each other. They go stale when a venue reconfigures a room.
-Two of the venues that appear near the top of every "best private dining in San Francisco" list —
-Town Hall and Roy's — have closed, and their listings are still up. A planner who puts a venue in
+Two of the venues that appear near the top of every "best private dining in San Francisco" list,
+Town Hall and Roy's, have closed, and their listings are still up. A planner who puts a venue in
 a deck and finds out on the call that the room was never that big has burned a day and some
 credibility.
 
@@ -31,16 +30,16 @@ without showing how much to trust it:
 
 | Label | Meaning |
 |---|---|
-| **Verified** | The venue published it — its own events page, a capacity chart, a banquet PDF — or a planner confirmed it by phone. |
+| **Verified** | The venue published it (its own events page, a capacity chart, a banquet PDF), or a planner confirmed it by phone. |
 | **Likely** | A booking platform (The Vendry, Tagvenue, Cvent) or an editorial guide carries it. Usually right, occasionally out of date. |
-| **Unverified — needs a call** | We estimated it, or nobody published it. |
+| **Unverified, needs a call** | We estimated it, or nobody published it. |
 
 Two extra rules do most of the work:
 
 - **Age costs a level.** A first-party capacity from two years ago drops to _likely_; past three
   years it drops to _unverified_. Private dining pages change slowly, but they do change.
 - **Independent agreement promotes.** Two third-party listings on different hosts stating the same
-  number promote to _verified_. Two pages of the same aggregator do not — that is one source.
+  number promote to _verified_. Two pages of the same aggregator do not, because that is one source.
 
 Every badge in the UI is clickable and shows the source URL, the verbatim sentence the number came
 from, and the date it was last checked. Capacity and price carry separate labels, because a venue
@@ -124,9 +123,10 @@ Two decisions carry most of the weight here.
 
 **Narrow before you route.** Routing is the only per-request call to a third party, so nothing gets
 routed until a bounding-box query in Postgres has ruled out everything that cannot possibly
-qualify. The radius is deliberately generous — straight-line distance always under-estimates a real
-walking route, and a venue dropped by the prefilter can never be recovered later. A Midtown search
-issues one matrix call for a dozen destinations rather than one for the whole catalogue.
+qualify. The radius is deliberately generous, because straight-line distance always
+under-estimates a real walking route and a venue dropped by the prefilter can never be recovered
+later. A Midtown search issues one matrix call for a dozen destinations rather than one for the
+whole catalogue.
 
 **Never fail the search.** Providers are tried in order and a straight-line estimate is the
 backstop, so a search always returns even if the free routing service is down. Estimated commutes
@@ -151,17 +151,17 @@ each card.
 Two of these are less obvious than they look.
 
 **Room fit is not "bigger is better".** A room that holds exactly the headcount scores worse than
-one with a little slack — you need room for a bar, a screen, servers, and the two people who were
-not on the list. A room three times the size scores worse still: it feels empty and you pay for
-space you do not use. The sweet spot is 1.1× to 1.6×. This is why the Waikiki scenario recommends
-Hilton Hawaiian Village's Rainbow Suite (273 standing) for 200 people rather than the Coral
-Ballroom, which holds 3,775.
+one with a little slack, because you need room for a bar, a screen, servers, and the two people
+who were not on the list. A room three times the size scores worse still: it feels empty and you
+pay for space you do not use. The sweet spot is 1.1× to 1.6×. This is why the Waikiki scenario
+recommends Hilton Hawaiian Village's Rainbow Suite (273 standing) for 200 people rather than the
+Coral Ballroom, which holds 3,775.
 
 **Data confidence outranks price.** The expensive failure in this workflow is not overpaying by
 10%; it is a venue that turns out not to fit. Weighting trust above budget is a claim about what
 planners actually optimise for, and the tests assert it so it cannot drift by accident.
 
-Capacity is measured against the requested format — seated for dinners, standing for receptions.
+Capacity is measured against the requested format: seated for dinners, standing for receptions.
 Where a venue publishes only one of the two, the other is converted with a conservative factor and
 capped at _likely_, because that number was never published by anybody.
 
@@ -176,25 +176,25 @@ minutes of slack would fix it.
 The brief is a research and comparison workflow, not an API, so the interface is built around what
 happens after the results land.
 
-- **Search panel** — address, headcount, commute budget, walking or driving, event format, and
+- **Search panel**: address, headcount, commute budget, walking or driving, event format, and
   optional budget-per-head and dietary filters. The three scenarios from the spec are presets.
-- **Ranked cards** — commute, recommended room, and price signal as three scannable stats, with the
+- **Ranked cards**: commute, recommended room, and price signal as three scannable stats, with the
   trust badge on the venue and a separate one on the price. Warnings ("room is at near-capacity for
-  this group", "requires combining rooms — confirm the wall actually opens") sit on the card rather
+  this group", "requires combining rooms, confirm the wall actually opens") sit on the card rather
   than being buried.
-- **Score breakdown** — click the number, see the seven components with their weights and reasoning.
-- **Map** — pins coloured by trust, numbered to match the list, with the commute radius drawn
+- **Score breakdown**: click the number, see the seven components with their weights and reasoning.
+- **Map**: pins coloured by trust, numbered to match the list, with the commute radius drawn
   faintly as orientation. Selecting either side highlights the other.
-- **Detail drawer** — every space with seated/standing/minimum, group menus, dietary accommodation,
+- **Detail drawer**: every space with seated/standing/minimum, group menus, dietary accommodation,
   and a full source list showing each snippet and the date it was checked.
-- **Compare** — up to four venues side by side, ordered so the make-or-break facts are at the top.
-- **Shortlist and export** — star venues, export to CSV with the columns that go into a deck.
-- **Outreach draft** — a first-contact email generated from the search. The useful part is that the
+- **Compare**: up to four venues side by side, ordered so the make-or-break facts are at the top.
+- **Shortlist and export**: star venues, export to CSV with the columns that go into a deck.
+- **Outreach draft**: a first-contact email generated from the search. The useful part is that the
   questions come from what this venue's record is missing: if capacity came from a directory it
   asks them to confirm it, if there is no published minimum it asks for one.
 
 Commute mode is stated on every result and in the export. **Walking is the default**, which is the
-right default for all three scenarios — a group of fifty leaving an office at 6pm walks.
+right default for all three scenarios. A group of fifty leaving an office at 6pm walks.
 
 ---
 
@@ -222,7 +222,7 @@ scripts/db/seed.ts            load the catalogue into Postgres
 
 ### The research pipeline
 
-Reading capacity out of venue pages is the genuinely tedious part of this problem — every venue
+Reading capacity out of venue pages is the genuinely tedious part of this problem. Every venue
 publishes it in a different shape, and there are a few hundred per market.
 `npm run research:extract` fetches a page, strips it to text, and asks Claude for a structured
 record under one rule: extract only what the page literally says, and attach the sentence you took
@@ -284,7 +284,7 @@ more work than a column, and it means a label can never drift out of sync with i
 ## What I would do next
 
 **Close the loop on calls.** The natural next step is a phone-call outcome: a planner rings a
-venue, records what they were told, and that becomes `source_kind: phone_call` — first-party
+venue, records what they were told, and that becomes `source_kind: phone_call`: first-party
 evidence with today's date. The schema already supports it. That is the point where the trust
 labels start improving themselves instead of decaying.
 

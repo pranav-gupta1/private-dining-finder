@@ -10,15 +10,6 @@ const STYLE_PHRASE: Record<SearchRequest["style"], string> = {
   meeting: "a working meeting with catering",
 };
 
-/**
- * First-contact email for a venue.
- *
- * The useful part is not the pleasantries — it is that the questions are
- * derived from what this venue's record is actually missing. If capacity came
- * from a directory listing, the draft asks them to confirm it. If no minimum
- * spend is published, it asks for one. A planner sending twelve of these should
- * not have to work out what to ask each time.
- */
 export function buildOutreachDraft(
   result: RankedVenue,
   request: SearchRequest,
@@ -95,7 +86,6 @@ export function buildOutreachDraft(
   return { subject, body };
 }
 
-/** Shortlist export. One row per venue, the columns a planner pastes into a deck. */
 export function toCsv(results: RankedVenue[], request: SearchRequest): string {
   const headers = [
     "Rank",

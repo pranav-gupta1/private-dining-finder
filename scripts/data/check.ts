@@ -1,14 +1,3 @@
-/**
- * Dataset integrity check.
- *
- *   npm run data:check
- *
- * Runs before seeding, and is worth running after any hand edit. The rules here
- * are the ones that actually caught mistakes while the catalogue was being
- * built: evidence pointing at a room that was later renamed, a capacity typed
- * with an extra zero, a coordinate in the wrong hemisphere.
- */
-
 import "dotenv/config";
 
 import { seedFiles } from "../../src/lib/db/snapshot";
@@ -20,7 +9,6 @@ interface Problem {
   message: string;
 }
 
-/** Rough centre of each market, used to catch coordinates in the wrong city. */
 const MARKET_CENTRES: Record<string, { lat: number; lon: number; radiusKm: number }> = {
   "Manhattan, NY": { lat: 40.7589, lon: -73.9851, radiusKm: 12 },
   "San Francisco, CA": { lat: 37.7897, lon: -122.3967, radiusKm: 12 },
@@ -73,7 +61,7 @@ function main() {
             add("error", `space "${space.name}" combines with "${other}", which does not exist`);
           }
         }
-        // A room with a $500k minimum is a typo far more often than it is real.
+
         if (space.minSpendCents && space.minSpendCents > 50_000_000) {
           add("warning", `space "${space.name}" has a minimum spend over $500,000`);
         }
@@ -91,7 +79,6 @@ function main() {
         }
       }
 
-      // Every space we would recommend needs something backing its capacity.
       const capacityEvidence = venue.evidence.filter((e) => e.field === "space.capacity");
       for (const space of venue.spaces) {
         const covered = capacityEvidence.some((e) => e.space === space.name || !e.space);

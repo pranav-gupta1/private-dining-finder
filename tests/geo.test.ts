@@ -18,7 +18,6 @@ describe("haversineMeters", () => {
   });
 
   it("matches a known short Manhattan distance", () => {
-    // Times Square to Keens is a little over 800 m as the crow flies.
     const metres = haversineMeters(TIMES_SQUARE, KEENS);
     expect(metres).toBeGreaterThan(750);
     expect(metres).toBeLessThan(850);
@@ -41,7 +40,7 @@ describe("haversineMeters", () => {
 describe("estimateTravel", () => {
   it("produces a walking time in the right ballpark", () => {
     const { durationSeconds, distanceMeters } = estimateTravel(TIMES_SQUARE, KEENS, "walking");
-    // ~800 m straight line, ~1 km walked, ~12 minutes at planning pace.
+
     expect(distanceMeters).toBeGreaterThan(950);
     expect(durationSeconds / 60).toBeGreaterThan(10);
     expect(durationSeconds / 60).toBeLessThan(15);
@@ -56,7 +55,7 @@ describe("estimateTravel", () => {
     const walk = estimateTravel(TIMES_SQUARE, KEENS, "walking").durationSeconds;
     const drive = estimateTravel(TIMES_SQUARE, KEENS, "driving").durationSeconds;
     expect(drive).toBeGreaterThan(0);
-    // Over ~800 m in Midtown, parking and traffic mean driving is no quicker.
+
     expect(drive).toBeGreaterThan(walk * 0.4);
   });
 });
@@ -75,8 +74,6 @@ describe("prefilterRadiusMeters", () => {
   });
 
   it("never excludes a venue the estimator would have accepted", () => {
-    // The radius has to be generous in the direction of over-inclusion: a
-    // venue dropped by the prefilter can never be recovered later.
     const budgetMinutes = 20;
     const radius = prefilterRadiusMeters(budgetMinutes, "walking");
     const destination = { lat: TIMES_SQUARE.lat + radius / 111_320, lon: TIMES_SQUARE.lon };

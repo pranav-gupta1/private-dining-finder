@@ -34,15 +34,6 @@ export const searchRequestSchema = z.object({
   includeUnverified: z.coerce.boolean().default(true),
 });
 
-/**
- * Run a search end to end.
- *
- * The expensive step is routing, so the order matters: geocode once, narrow by
- * straight-line radius in the database, and only then ask a routing provider
- * about the venues that survived. On a typical Midtown search that is the
- * difference between one matrix call for a dozen destinations and one for the
- * entire catalogue.
- */
 export async function runSearch(request: SearchRequest): Promise<SearchResponse> {
   const startedAt = Date.now();
   const notes: string[] = [];
@@ -50,7 +41,7 @@ export async function runSearch(request: SearchRequest): Promise<SearchResponse>
   const origin = await geocode(request.address);
 
   const radius = prefilterRadiusMeters(request.maxCommuteMinutes, request.travelMode);
-  // Venues just outside the limit are still worth surfacing as stretch options.
+
   const searchRadius = Math.round(radius * STRETCH_MULTIPLIER);
 
   const { venues, source, scanned } = await findCandidates(
@@ -89,8 +80,6 @@ export async function runSearch(request: SearchRequest): Promise<SearchResponse>
     .map(({ venue, commute }) => rankVenue(venue, commute, request))
     .filter((result): result is RankedVenue => result !== null)
     .sort((a, b) => {
-      // Everything inside the stated limit outranks everything outside it,
-      // however good the stretch option looks on paper.
       if (a.withinCommute !== b.withinCommute) return a.withinCommute ? -1 : 1;
       return b.score - a.score;
     });
