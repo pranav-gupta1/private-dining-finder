@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "../env";
 import { Client } from "pg";
 
 import { seedFiles } from "../../src/lib/db/snapshot";

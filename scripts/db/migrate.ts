@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "../env";
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";

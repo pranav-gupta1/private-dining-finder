@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "../env";
 
 import { seedFiles } from "../../src/lib/db/snapshot";
 import { haversineMeters } from "../../src/lib/geo/distance";

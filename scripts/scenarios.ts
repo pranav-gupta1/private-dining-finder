@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./env";
 
 import { runSearch } from "../src/lib/search/search";
 import { formatDistance, formatDuration } from "../src/lib/geo/distance";

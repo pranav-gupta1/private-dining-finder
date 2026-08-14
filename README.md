@@ -76,6 +76,8 @@ metadata. To use Postgres properly:
 1. Create a Supabase project.
 2. `cp .env.example .env.local` and fill in `NEXT_PUBLIC_SUPABASE_URL`,
    `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` and `SUPABASE_DB_URL`.
+   Use the **session pooler** connection string on port 5432, not the transaction
+   pooler on 6543, which does not support the migration runner's prepared statements.
 3. Run the migrations and load the catalogue:
 
 ```bash

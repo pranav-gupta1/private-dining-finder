@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "../env";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import Anthropic from "@anthropic-ai/sdk";
